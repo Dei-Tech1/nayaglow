@@ -2098,6 +2098,64 @@ window.addEventListener("scroll", function () {
 
 });
 
+
+/* =====================================================
+   LANGUAGE SWITCHER
+   ===================================================== */
+
+function toggleLanguageMenu() {
+
+    const menu =
+        document.getElementById("languageMenu");
+
+    if (!menu) return;
+
+    menu.classList.toggle("active");
+}
+
+
+function changeLanguage(language) {
+
+    const currentLanguage =
+        document.getElementById("currentLanguage");
+
+    const menu =
+        document.getElementById("languageMenu");
+
+    if (language === "fr") {
+        currentLanguage.textContent = "FR";
+    }
+
+    if (language === "en") {
+        currentLanguage.textContent = "EN";
+    }
+
+    if (menu) {
+        menu.classList.remove("active");
+    }
+}
+
+
+/* =====================================================
+   CLOSE LANGUAGE MENU
+   ===================================================== */
+
+document.addEventListener("click", function(event) {
+
+    const switcher =
+        document.querySelector(".language-switcher");
+
+    const menu =
+        document.getElementById("languageMenu");
+
+    if (!switcher || !menu) return;
+
+    if (!switcher.contains(event.target)) {
+        menu.classList.remove("active");
+    }
+
+});
+   
 </script>
 
 </body>
