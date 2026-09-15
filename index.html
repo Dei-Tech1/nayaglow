@@ -1246,15 +1246,39 @@ footer {
         <img src="naya-logo.jpg" alt="NayaGlow">
     </a>
 
-    <nav class="nav-links" id="navLinks">
-        <a href="#home">Accueil</a>
-        <a href="#products">Produits</a>
-        <a href="#about">À propos</a>
-        <a href="#why">Pourquoi NayaGlow</a>
-        <a href="#mothers">Pour les mamans</a>
-        <a href="#routine">Routine</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <nav class="nav-links">
+
+    <a href="#home">Accueil</a>
+    <a href="#products">Produits</a>
+    <a href="#about">À propos</a>
+    <a href="#why">Pourquoi NayaGlow</a>
+    <a href="#mother">Pour les mamans</a>
+    <a href="#routine">Routine</a>
+    <a href="#testimonials">Témoignages</a>
+
+    <a href="#contact" class="nav-cta">Nous contacter</a>
+
+    <div class="language-switcher">
+
+        <button class="language-btn" onclick="toggleLanguageMenu()">
+            🌐 <span id="currentLanguage">FR</span>
+        </button>
+
+        <div class="language-menu" id="languageMenu">
+
+            <button onclick="changeLanguage('fr')">
+                🇫🇷 Français
+            </button>
+
+            <button onclick="changeLanguage('en')">
+                🇬🇧 English
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
 
     <button class="menu-btn" id="menuBtn" aria-label="Menu">
         ☰
