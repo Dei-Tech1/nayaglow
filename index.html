@@ -1220,6 +1220,62 @@ footer {
     }
 
 }
+
+   /* =====================================================
+   LANGUAGE SWITCHER
+   ===================================================== */
+
+.language-switcher {
+    position: relative;
+}
+
+.language-btn {
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--brown);
+    padding: 10px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.language-btn:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 145px;
+    background: var(--ivory);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    display: none;
+    z-index: 2000;
+}
+
+.language-menu.active {
+    display: block;
+}
+
+.language-menu button {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 13px 15px;
+    text-align: left;
+    color: var(--brown);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.language-menu button:hover {
+    background: #f1e8d8;
+    color: var(--gold);
+}
    
 </style>
 </head>
