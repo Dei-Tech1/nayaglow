@@ -1094,4 +1094,129 @@ footer {
     }
 
     .benefit:nth-child(-n+2) {
-        border-bottom: 1
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .products-grid,
+    .routine-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo img {
+        width: 85px;
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 62px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .hero-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-circle::after {
+        font-size: 170px;
+    }
+
+    .floating-card {
+        padding: 14px;
+        font-size: 9px;
+    }
+
+    .card-top {
+        top: 30px;
+    }
+
+    .card-bottom {
+        bottom: 30px;
+    }
+
+    .products-heading {
+        display: block;
+    }
+
+    .products-grid,
+    .routine-grid,
+    .testimonial-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .about-box {
+        width: 88%;
+        height: 370px;
+    }
+
+    .about-floating {
+        width: 180px;
+        padding: 22px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit,
+    .benefit:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .benefit:last-child {
+        border-bottom: 0;
+    }
+
+    .mother-grid {
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .whatsapp {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
