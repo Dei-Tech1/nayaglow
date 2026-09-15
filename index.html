@@ -1,90 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>NayaGlow — Révélez votre beauté au naturel</title>
+    <title>NayaGlow | Révélez la beauté au naturel</title>
 
     <meta name="description"
-          content="NayaGlow — Des soins naturels pour prendre soin de votre peau et de vos cheveux.">
+          content="NayaGlow — Prenez soin de votre peau et de vos cheveux naturellement.">
 
     <style>
 
         /* =====================================================
-           NAYAGLOW — GLOBAL
-           ===================================================== */
+           GLOBAL
+        ===================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        :root {
+            --ivory: #fbf8f1;
+            --cream: #f2eadc;
+            --cream-dark: #e8dccb;
 
-html {
-    scroll-behavior: smooth;
-}
+            --gold: #c6a15b;
+            --gold-dark: #a98240;
 
-:root {
-    --ivory: #fbf8f1;
-    --cream: #f3ede1;
-    --gold: #c6a15b;
-    --gold-light: #dfc58b;
-    --brown: #3d3027;
-    --brown-soft: #75675b;
-    --green: #68745a;
-    --white: #ffffff;
-}
+            --brown: #3d3027;
+            --brown-soft: #75675b;
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: var(--ivory);
-    color: var(--brown);
-    line-height: 1.6;
-}
+            --green: #68745a;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--ivory);
+            color: var(--brown);
+
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
 
 
         /* =====================================================
            HEADER
-           ===================================================== */
+        ===================================================== */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+
             z-index: 1000;
 
-            background: rgba(8, 8, 8, 0.88);
-            backdrop-filter: blur(14px);
+            background: rgba(251, 248, 241, 0.94);
 
-            border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(198, 161, 91, 0.25);
         }
 
         .nav {
-            width: min(1150px, 92%);
-            margin: auto;
-
-            min-height: 78px;
+            min-height: 82px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
+
+            gap: 25px;
         }
 
         .logo {
-            width: 72px;
-            height: 58px;
+            width: 70px;
+            height: 62px;
 
             overflow: hidden;
+
             border-radius: 50%;
 
-            border: 1px solid rgba(212, 175, 55, 0.45);
+            border: 1px solid rgba(198, 161, 91, 0.5);
 
-            flex-shrink: 0;
+            background: var(--white);
         }
 
         .logo img {
@@ -92,45 +115,44 @@ body {
             height: 100%;
 
             object-fit: cover;
-            object-position: center;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 28px;
 
             font-family: Arial, sans-serif;
             font-size: 13px;
         }
 
         .nav-links a {
-            color: #ddd5c5;
+            color: var(--brown);
             transition: 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #d4af37;
+            color: var(--gold-dark);
         }
 
         .nav-button {
-            padding: 11px 18px;
+            padding: 11px 19px;
 
-            border: 1px solid #d4af37;
+            border: 1px solid var(--gold);
             border-radius: 30px;
 
-            color: #d4af37 !important;
+            color: var(--brown) !important;
         }
 
         .nav-button:hover {
-            background: #d4af37;
-            color: #fbf8f1 !important;
+            background: var(--gold);
+            color: var(--white) !important;
         }
 
 
         /* =====================================================
            HERO
-           ===================================================== */
+        ===================================================== */
 
         .hero {
             min-height: 100vh;
@@ -138,191 +160,176 @@ body {
             display: flex;
             align-items: center;
 
-            padding: 120px 6% 70px;
-
-            position: relative;
-            overflow: hidden;
+            padding: 140px 0 80px;
 
             background:
                 radial-gradient(
-                    circle at 70% 40%,
-                    rgba(212, 175, 55, 0.12),
-                    transparent 35%
+                    circle at 80% 25%,
+                    rgba(198, 161, 91, 0.18),
+                    transparent 32%
                 ),
-                #fbf8f1;
+                var(--ivory);
         }
 
-        .hero::before {
-            content: "";
-
-            position: absolute;
-            width: 500px;
-            height: 500px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(212, 175, 55, 0.08);
-
-            right: -180px;
-            top: 100px;
-        }
-
-        .hero-container {
-            width: min(1150px, 100%);
-            margin: auto;
-
+        .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+
+            grid-template-columns: 1.05fr 0.95fr;
 
             align-items: center;
 
-            gap: 60px;
-
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            max-width: 650px;
+            gap: 65px;
         }
 
         .eyebrow {
+            color: var(--green);
+
             font-family: Arial, sans-serif;
 
-            color: #d4af37;
-
-            letter-spacing: 4px;
             font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
 
             margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(44px, 6vw, 76px);
-
-            line-height: 1.05;
+            font-size: clamp(43px, 6vw, 76px);
 
             font-weight: 400;
+
+            line-height: 1.08;
 
             margin-bottom: 25px;
         }
 
         .hero h1 span {
-            color: #d4af37;
+            color: var(--gold-dark);
         }
 
         .hero-text {
-            font-family: Arial, sans-serif;
-
-            color: #c9c1b2;
-
-            font-size: 17px;
-
             max-width: 570px;
 
-            margin-bottom: 35px;
+            color: var(--brown-soft);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 16px;
+
+            margin-bottom: 32px;
         }
 
-        .hero-buttons {
+        .buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 14px;
         }
 
-        .btn {
+        .button {
             display: inline-flex;
 
             align-items: center;
             justify-content: center;
 
-            padding: 14px 25px;
+            padding: 14px 24px;
 
             border-radius: 30px;
 
             font-family: Arial, sans-serif;
 
             font-size: 13px;
+            font-weight: bold;
 
             transition: 0.3s ease;
         }
 
-        .btn-primary {
-            background: #d4af37;
-            color: fbf8f1;
+        .button-primary {
+            background: var(--gold);
+            color: var(--white);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: #e4c65c;
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(212, 175, 55, 0.7);
-            color: #d4af37;
-        }
-
-        .btn-outline:hover {
-            background: rgba(212, 175, 55, 0.1);
+        .button-primary:hover {
+            background: var(--gold-dark);
             transform: translateY(-3px);
         }
 
+        .button-outline {
+            border: 1px solid var(--gold);
+            color: var(--brown);
+        }
 
-        /* =====================================================
-           HERO LOGO
-           ===================================================== */
+        .button-outline:hover {
+            background: rgba(198, 161, 91, 0.13);
+            transform: translateY(-3px);
+        }
 
-        .hero-logo-wrapper {
+        .hero-image {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .hero-logo {
-            width: min(430px, 90vw);
+        .logo-display {
+            width: min(420px, 90vw);
             aspect-ratio: 1 / 1;
-
-            border-radius: 50%;
 
             overflow: hidden;
 
-            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 50%;
+
+            background: var(--white);
+
+            border: 1px solid rgba(198, 161, 91, 0.4);
 
             box-shadow:
-                0 0 60px rgba(212, 175, 55, 0.08),
-                0 0 120px rgba(212, 175, 55, 0.04);
+                0 20px 60px rgba(61, 48, 39, 0.08);
         }
 
-        .hero-logo img {
+        .logo-display img {
             width: 100%;
             height: 100%;
 
             object-fit: cover;
-            object-position: center;
         }
 
 
         /* =====================================================
-           INTRO STRIP
-           ===================================================== */
+           INTRODUCTION
+        ===================================================== */
 
         .intro {
-            padding: 80px 6%;
+            padding: 85px 0;
 
             text-align: center;
 
-            border-top: 1px solid rgba(212, 175, 55, 0.12);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+            background: var(--cream);
 
-            background: #0d0d0d;
+            border-top: 1px solid rgba(198, 161, 91, 0.18);
+            border-bottom: 1px solid rgba(198, 161, 91, 0.18);
         }
 
-        .intro-inner {
-            width: min(800px, 100%);
+        .intro-content {
+            width: min(780px, 100%);
             margin: auto;
         }
 
+        .section-label {
+            color: var(--green);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 13px;
+        }
+
         .intro h2 {
-            font-size: clamp(28px, 4vw, 44px);
+            font-size: clamp(30px, 4vw, 48px);
 
             font-weight: 400;
 
@@ -330,103 +337,166 @@ body {
         }
 
         .intro h2 span {
-            color: #d4af37;
+            color: var(--gold-dark);
         }
 
         .intro p {
-            font-family: Arial, sans-serif;
+            color: var(--brown-soft);
 
-            color: #aaa296;
+            font-family: Arial, sans-serif;
 
             font-size: 15px;
         }
 
 
         /* =====================================================
-           COMING SOON PRODUCTS
-           ===================================================== */
+           PRODUCTS
+        ===================================================== */
 
         .products {
-            padding: 100px 6%;
-        }
-
-        .section-container {
-            width: min(1150px, 100%);
-            margin: auto;
-        }
-
-        .section-label {
-            font-family: Arial, sans-serif;
-
-            color: #d4af37;
-
-            letter-spacing: 3px;
-
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 12px;
+            padding: 100px 0;
         }
 
         .section-title {
-            font-size: clamp(32px, 5vw, 52px);
+            font-size: clamp(34px, 5vw, 54px);
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .section-text {
+            max-width: 650px;
+
+            color: var(--brown-soft);
+
+            font-family: Arial, sans-serif;
+
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .product-card {
+            min-height: 230px;
+
+            padding: 30px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            text-align: center;
+
+            background: var(--white);
+
+            border: 1px solid rgba(198, 161, 91, 0.25);
+
+            border-radius: 8px;
+
+            transition: 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(61, 48, 39, 0.08);
+        }
+
+        .product-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+
+        .product-card h3 {
+            color: var(--brown);
+
+            font-size: 23px;
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: var(--brown-soft);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           MISSION
+        ===================================================== */
+
+        .mission {
+            padding: 95px 0;
+
+            background: var(--cream);
+        }
+
+        .mission-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 60px;
+        }
+
+        .mission h2 {
+            font-size: clamp(32px, 4vw, 50px);
 
             font-weight: 400;
 
             margin-bottom: 20px;
         }
 
-        .section-text {
+        .mission p {
+            color: var(--brown-soft);
+
             font-family: Arial, sans-serif;
 
-            color: #aaa296;
-
-            max-width: 650px;
-
-            margin-bottom: 45px;
+            margin-bottom: 18px;
         }
 
-        .product-placeholder {
-            min-height: 230px;
+        .mission-highlight {
+            padding: 28px;
 
-            border: 1px dashed rgba(212, 175, 55, 0.3);
+            background: var(--white);
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-left: 4px solid var(--gold);
 
-            text-align: center;
+            color: var(--brown);
 
-            padding: 30px;
-        }
+            font-size: 22px;
 
-        .product-placeholder p {
-            font-family: Arial, sans-serif;
-
-            color: #817a70;
-
-            max-width: 500px;
+            font-style: italic;
         }
 
 
         /* =====================================================
-           CTA
-           ===================================================== */
+           CALL TO ACTION
+        ===================================================== */
 
         .cta {
-            padding: 100px 6%;
+            padding: 100px 0;
 
             text-align: center;
 
-            background:
-                linear-gradient(
-                    rgba(8,8,8,0.88),
-                    rgba(8,8,8,0.95)
-                );
+            background: var(--ivory);
         }
 
-        .cta-inner {
+        .cta-content {
             width: min(750px, 100%);
             margin: auto;
         }
@@ -440,9 +510,9 @@ body {
         }
 
         .cta p {
-            font-family: Arial, sans-serif;
+            color: var(--brown-soft);
 
-            color: #aaa296;
+            font-family: Arial, sans-serif;
 
             margin-bottom: 30px;
         }
@@ -450,34 +520,32 @@ body {
 
         /* =====================================================
            FOOTER
-           ===================================================== */
+        ===================================================== */
 
         footer {
-            padding: 35px 6%;
-
-            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 35px 0;
 
             text-align: center;
 
-            background: #050505;
+            background: var(--brown);
+
+            color: var(--ivory);
         }
 
         footer p {
             font-family: Arial, sans-serif;
 
             font-size: 12px;
-
-            color: #777;
         }
 
         footer span {
-            color: #d4af37;
+            color: var(--gold-light);
         }
 
 
         /* =====================================================
            MOBILE
-           ===================================================== */
+        ===================================================== */
 
         @media (max-width: 850px) {
 
@@ -486,10 +554,10 @@ body {
             }
 
             .hero {
-                padding-top: 120px;
+                padding-top: 130px;
             }
 
-            .hero-container {
+            .hero-grid {
                 grid-template-columns: 1fr;
 
                 text-align: center;
@@ -497,39 +565,51 @@ body {
                 gap: 50px;
             }
 
-            .hero-content {
-                margin: auto;
-            }
-
             .hero-text {
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            .hero-buttons {
+            .buttons {
                 justify-content: center;
             }
 
-            .hero-logo {
-                width: min(330px, 80vw);
+            .hero-image {
+                order: -1;
+            }
+
+            .logo-display {
+                width: 280px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .mission-highlight {
+                font-size: 19px;
             }
         }
-
 
         @media (max-width: 500px) {
 
             .nav {
-                min-height: 68px;
+                min-height: 70px;
             }
 
             .logo {
                 width: 60px;
-                height: 50px;
+                height: 52px;
             }
 
             .hero {
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-top: 115px;
             }
 
             .hero h1 {
@@ -540,23 +620,25 @@ body {
                 font-size: 15px;
             }
 
-            .btn {
+            .button {
                 width: 100%;
             }
 
-            .hero-logo {
-                width: 280px;
+            .logo-display {
+                width: 245px;
             }
 
             .intro,
             .products,
+            .mission,
             .cta {
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-top: 70px;
+                padding-bottom: 70px;
             }
         }
 
     </style>
+
 </head>
 
 
@@ -565,17 +647,17 @@ body {
 
     <!-- =====================================================
          HEADER
-         ===================================================== -->
+    ===================================================== -->
 
     <header>
 
-        <nav class="nav">
+        <nav class="nav container">
 
-            <a href="#" class="logo">
+            <a href="#accueil" class="logo">
 
                 <img
                     src="naya-logo.jpg"
-                    alt="NayaGlow"
+                    alt="Logo NayaGlow"
                 >
 
             </a>
@@ -592,7 +674,7 @@ body {
                 </a>
 
                 <a href="#produits">
-                    Nos produits
+                    Nos soins
                 </a>
 
                 <a href="#contact" class="nav-button">
@@ -609,13 +691,13 @@ body {
 
     <!-- =====================================================
          HERO
-         ===================================================== -->
+    ===================================================== -->
 
     <main>
 
         <section class="hero" id="accueil">
 
-            <div class="hero-container">
+            <div class="hero-grid container">
 
 
                 <div class="hero-content">
@@ -626,9 +708,11 @@ body {
 
 
                     <h1>
+
                         Révélez votre
                         <span>beauté</span>
                         au naturel.
+
                     </h1>
 
 
@@ -645,11 +729,11 @@ body {
                     </p>
 
 
-                    <div class="hero-buttons">
+                    <div class="buttons">
 
                         <a
                             href="#produits"
-                            class="btn btn-primary"
+                            class="button button-primary"
                         >
                             Découvrir nos soins
                         </a>
@@ -657,9 +741,9 @@ body {
 
                         <a
                             href="#contact"
-                            class="btn btn-outline"
+                            class="button button-outline"
                         >
-                            Commander sur WhatsApp
+                            Nous contacter
                         </a>
 
                     </div>
@@ -668,13 +752,13 @@ body {
 
 
 
-                <div class="hero-logo-wrapper">
+                <div class="hero-image">
 
-                    <div class="hero-logo">
+                    <div class="logo-display">
 
                         <img
                             src="naya-logo.jpg"
-                            alt="Logo NayaGlow"
+                            alt="NayaGlow — Révélez la beauté au naturel"
                         >
 
                     </div>
@@ -689,22 +773,28 @@ body {
 
 
         <!-- =================================================
-             INTRO
-             ================================================= -->
+             INTRODUCTION
+        ================================================= -->
 
         <section class="intro" id="univers">
 
-            <div class="intro-inner">
+            <div class="intro-content container">
+
+                <div class="section-label">
+                    Notre philosophie
+                </div>
 
                 <h2>
+
                     Prenez soin de vous,
                     <span>naturellement.</span>
+
                 </h2>
 
                 <p>
 
                     Être maman, c'est donner beaucoup de soi.
-                    NayaGlow veut rappeler une chose essentielle :
+                    NayaGlow vous rappelle une chose essentielle :
                     votre bien-être compte aussi.
 
                 </p>
@@ -717,14 +807,14 @@ body {
 
         <!-- =================================================
              PRODUCTS
-             ================================================= -->
+        ================================================= -->
 
         <section class="products" id="produits">
 
-            <div class="section-container">
+            <div class="container">
 
                 <div class="section-label">
-                    NayaGlow
+                    L'univers NayaGlow
                 </div>
 
                 <h2 class="section-title">
@@ -740,14 +830,64 @@ body {
                 </p>
 
 
-                <div class="product-placeholder">
+                <div class="product-grid">
 
-                    <p>
 
-                        ✨ Les produits NayaGlow seront
-                        présentés ici prochainement.
+                    <div class="product-card">
 
-                    </p>
+                        <div class="product-icon">
+                            🌿
+                        </div>
+
+                        <h3>
+                            Soins de la peau
+                        </h3>
+
+                        <p>
+                            Des rituels pensés pour votre peau,
+                            tout en douceur.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="product-card">
+
+                        <div class="product-icon">
+                            ✨
+                        </div>
+
+                        <h3>
+                            Soins des cheveux
+                        </h3>
+
+                        <p>
+                            Révélez la beauté naturelle
+                            de vos cheveux.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="product-card">
+
+                        <div class="product-icon">
+                            🤍
+                        </div>
+
+                        <h3>
+                            Moments pour soi
+                        </h3>
+
+                        <p>
+                            Parce que prendre soin de soi
+                            est aussi une priorité.
+                        </p>
+
+                    </div>
+
 
                 </div>
 
@@ -758,65 +898,67 @@ body {
 
 
         <!-- =================================================
-             CTA
-             ================================================= -->
+             MISSION
+        ================================================= -->
 
-        <section class="cta" id="contact">
+        <section class="mission">
 
-            <div class="cta-inner">
+            <div class="mission-grid container">
 
-                <div class="section-label">
-                    Votre beauté, votre moment
+
+                <div>
+
+                    <div class="section-label">
+                        Notre mission
+                    </div>
+
+                    <h2>
+                        Votre beauté mérite
+                        aussi votre attention.
+                    </h2>
+
+                    <p>
+
+                        NayaGlow est né d'une idée simple :
+                        encourager chaque femme à retrouver
+                        du temps pour elle.
+
+                    </p>
+
+                    <p>
+
+                        La beauté naturelle commence par
+                        l'amour de soi, la douceur et
+                        les petits gestes du quotidien.
+
+                    </p>
+
                 </div>
 
-                <h2>
-                    Il est temps de
-                    prendre soin de vous.
-                </h2>
-
-                <p>
-
-                    Pour découvrir NayaGlow et passer
-                    votre commande, contactez-nous
-                    directement sur WhatsApp.
-
-                </p>
 
 
-                <!--
-                    IMPORTANT:
-                    We will replace this # with the
-                    real WhatsApp link later.
-                -->
+                <div class="mission-highlight">
 
-                <a
-                    href="#"
-                    class="btn btn-primary"
-                >
-                    Commander sur WhatsApp
-                </a>
+                    « Après avoir pris soin des autres,
+                    prends aussi soin de toi. »
+
+                </div>
+
 
             </div>
 
         </section>
 
-    </main>
 
 
+        <!-- =================================================
+             CONTACT
+        ================================================= -->
 
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
+        <section class="cta" id="contact">
 
-    <footer>
+            <div class="cta-content container">
 
-        <p>
-            © 2026 <span>NayaGlow</span>.
-            Révélez la beauté au naturel.
-        </p>
-
-    </footer>
-
-
-</body>
-  </html>
+                <div class="section-label">
+                    Votre moment commence ici
+       
