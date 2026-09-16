@@ -2190,8 +2190,85 @@ function toggleLanguageMenu() {
     if (!menu) return;
 
     menu.classList.toggle("active");
+
 }
 
+
+/* =====================================================
+   TRANSLATIONS
+   ===================================================== */
+
+const translations = {
+
+    fr: {
+
+        /* ABOUT */
+
+        aboutBrand: "NayaGlow",
+
+        aboutNaturalBeauty: "NATURAL<br>BEAUTY",
+
+        aboutNaturally: "Naturellement.",
+
+        aboutSimply: "Simplement. Authentiquement.",
+
+        whoWeAre: "Qui sommes-nous ?",
+
+        aboutTitleStart: "La beauté commence<br>par",
+
+        aboutTitleEnd: "prendre soin de soi.",
+
+        aboutParagraph1:
+            "NayaGlow est une marque de beauté naturelle créée pour encourager les femmes à retrouver le plaisir de prendre soin d'elles-mêmes.",
+
+        aboutParagraph2:
+            "Nous croyons que prendre soin de sa peau, de ses cheveux et de son bien-être ne devrait jamais être considéré comme un luxe inaccessible.",
+
+        aboutParagraph3:
+            "Notre vision est simple : révéler la beauté naturelle de chaque femme avec des soins inspirés par la nature.",
+
+        aboutLearnMore: "En savoir plus →"
+
+    },
+
+
+    en: {
+
+        /* ABOUT */
+
+        aboutBrand: "NayaGlow",
+
+        aboutNaturalBeauty: "NATURAL<br>BEAUTY",
+
+        aboutNaturally: "Naturally.",
+
+        aboutSimply: "Simply. Authentically.",
+
+        whoWeAre: "Who are we?",
+
+        aboutTitleStart: "Beauty begins<br>with",
+
+        aboutTitleEnd: "taking care of yourself.",
+
+        aboutParagraph1:
+            "NayaGlow is a natural beauty brand created to encourage women to rediscover the joy of taking care of themselves.",
+
+        aboutParagraph2:
+            "We believe that caring for your skin, hair and well-being should never be considered an inaccessible luxury.",
+
+        aboutParagraph3:
+            "Our vision is simple: to reveal every woman's natural beauty through nature-inspired care.",
+
+        aboutLearnMore: "Learn more →"
+
+    }
+
+};
+
+
+/* =====================================================
+   CHANGE LANGUAGE
+   ===================================================== */
 
 function changeLanguage(language) {
 
@@ -2201,25 +2278,49 @@ function changeLanguage(language) {
     const menu =
         document.getElementById("languageMenu");
 
-    if (language === "fr") {
-        currentLanguage.textContent = "FR";
+    const selectedTranslations =
+        translations[language];
+
+    if (!selectedTranslations) return;
+
+
+    document.querySelectorAll("[data-i18n]").forEach(function (element) {
+
+        const key =
+            element.getAttribute("data-i18n");
+
+        if (selectedTranslations[key] !== undefined) {
+
+            element.innerHTML =
+                selectedTranslations[key];
+
+        }
+
+    });
+
+
+    if (currentLanguage) {
+
+        currentLanguage.textContent =
+            language.toUpperCase();
+
     }
 
-    if (language === "en") {
-        currentLanguage.textContent = "EN";
-    }
 
     if (menu) {
+
         menu.classList.remove("active");
+
     }
+
 }
 
 
 /* =====================================================
-   CLOSE LANGUAGE MENU
+   CLOSE LANGUAGE MENU WHEN CLICKING OUTSIDE
    ===================================================== */
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
 
     const switcher =
         document.querySelector(".language-switcher");
@@ -2230,7 +2331,9 @@ document.addEventListener("click", function(event) {
     if (!switcher || !menu) return;
 
     if (!switcher.contains(event.target)) {
+
         menu.classList.remove("active");
+
     }
 
 });
