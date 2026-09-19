@@ -4044,4 +4044,251 @@ letter-spacing: 0.22em;
     line-height: 1.85;
 }
 
+/* =====================================================
+   NAYAGLOW — STEP 17
+   POUR LES MAMANS — PART 2
+   ===================================================== */
 
+
+/* =====================================================
+   10. MOTHERS VALUES
+   ===================================================== */
+
+.mothers-values {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.mother-value {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 18px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.mother-value span {
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 20px;
+}
+
+
+.mother-value strong {
+    color: var(--green);
+
+    font-size: 11px;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   11. MOTHERS CTA
+   ===================================================== */
+
+.mothers-content .btn {
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   12. DECORATIVE BACKGROUND
+   ===================================================== */
+
+.mothers::before {
+    content: "";
+
+    position: absolute;
+
+    right: -180px;
+    top: 50%;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.12);
+
+    border-radius: 50%;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   13. TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .mothers {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+
+    .mothers-layout {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+    }
+
+
+    .mothers-visual {
+        min-height: auto;
+    }
+
+
+    .mothers-frame {
+        width: min(
+            500px,
+            100%
+        );
+    }
+
+
+    .mothers-content {
+        max-width: 700px;
+    }
+
+}
+
+
+/* =====================================================
+   14. MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .mothers {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+
+    .mothers-layout {
+        gap: 45px;
+    }
+
+
+    .mothers-frame {
+        width: 100%;
+
+        max-width: 390px;
+    }
+
+
+    .mothers-number {
+        top: 18px;
+        left: 18px;
+
+        font-size: 21px;
+    }
+
+
+    .mothers-symbol {
+        width: 72px;
+        height: 72px;
+
+        font-size: 31px;
+    }
+
+
+    .mothers-frame p {
+        margin-top: 23px;
+
+        font-size: 9px;
+    }
+
+
+    .mothers-content h2 {
+        font-size: clamp(
+            47px,
+            13vw,
+            65px
+        );
+
+        line-height: 0.98;
+    }
+
+
+    .mothers-intro {
+        font-size: 15px;
+
+        line-height: 1.75;
+    }
+
+
+    .mothers-content > p:not(.eyebrow):not(.mothers-intro) {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .mothers-values {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        margin-top: 30px;
+    }
+
+
+    .mother-value {
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 15px 5px;
+    }
+
+
+    .mothers-content .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   15. VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .mothers-content h2 {
+        font-size: 43px;
+    }
+
+
+    .mothers-frame {
+        min-height: 420px;
+    }
+
+}
