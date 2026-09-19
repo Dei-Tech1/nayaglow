@@ -1218,3 +1218,271 @@ aria-label="Contacter NayaGlow sur WhatsApp"
 <strong>↗</strong>
 
      </a>
+/* =====================================================
+NAYAGLOW — CSS FOUNDATION
+===================================================== */
+
+/* =====================================================
+
+1. ROOT VARIABLES
+   ===================================================== */
+
+:root {
+
+--cream: #f3eee4;
+--cream-light: #f8f5ee;
+--green: #17382c;
+--green-soft: #294b3d;
+--gold: #b28a52;
+--brown: #5b4435;
+--text: #26342d;
+--muted: #756f65;
+--white: #ffffff;
+
+--border: rgba(23, 56, 44, 0.14);
+
+--shadow-soft:
+    0 20px 50px rgba(23, 56, 44, 0.08);
+
+--serif: "Cormorant Garamond", Georgia, serif;
+--sans: "DM Sans", Arial, sans-serif;
+
+--container: 1240px;
+
+}
+
+/* =====================================================
+2. RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--cream);
+color: var(--text);
+font-family: var(--sans);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+button {
+font: inherit;
+}
+
+/* =====================================================
+3. MAIN CONTAINER
+===================================================== */
+
+#app {
+width: 100%;
+}
+
+.section-pad {
+width: min(
+calc(100% - 80px),
+var(--container)
+);
+
+margin: 0 auto;
+
+}
+
+/* =====================================================
+4. TYPOGRAPHY
+===================================================== */
+
+h1,
+h2,
+h3 {
+font-family: var(--serif);
+font-weight: 500;
+line-height: 0.98;
+}
+
+h1 em,
+h2 em,
+h3 em {
+color: var(--green-soft);
+font-style: italic;
+}
+
+p {
+font-size: 15px;
+}
+
+.eyebrow {
+margin-bottom: 18px;
+
+color: var(--gold);
+
+font-size: 11px;
+font-weight: 700;
+
+letter-spacing: 0.22em;
+text-transform: uppercase;
+
+}
+
+.section-heading {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+
+gap: 60px;
+
+margin-bottom: 70px;
+
+}
+
+.section-heading h2 {
+max-width: 700px;
+
+font-size: clamp(
+    48px,
+    6vw,
+    82px
+);
+
+}
+
+.section-description {
+max-width: 360px;
+
+color: var(--muted);
+
+font-size: 15px;
+line-height: 1.8;
+
+}
+
+/* =====================================================
+5. BUTTONS
+===================================================== */
+
+.btn {
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+min-height: 54px;
+
+padding: 0 28px;
+
+border: 1px solid transparent;
+
+font-size: 12px;
+font-weight: 700;
+
+letter-spacing: 0.08em;
+text-transform: uppercase;
+
+transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+}
+
+.btn:hover {
+transform: translateY(-3px);
+}
+
+.btn-dark {
+background: var(--green);
+color: var(--white);
+}
+
+.btn-dark:hover {
+background: var(--green-soft);
+}
+
+.btn-light {
+background: var(--cream-light);
+color: var(--green);
+}
+
+.btn-light:hover {
+background: var(--white);
+}
+
+/* =====================================================
+6. TEXT LINKS
+===================================================== */
+
+.text-link {
+display: inline-flex;
+
+align-items: center;
+
+color: var(--green);
+
+font-size: 13px;
+font-weight: 600;
+
+transition:
+    transform 0.3s ease;
+
+}
+
+.text-link:hover {
+transform: translateX(5px);
+}
+
+/* =====================================================
+7. MOBILE BASE
+===================================================== */
+
+@media (max-width: 800px) {
+
+.section-pad {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+}
+
+
+.section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(
+        44px,
+        13vw,
+        64px
+    );
+}
+
+
+.section-description {
+    max-width: 100%;
+}
+
+}
