@@ -3596,5 +3596,181 @@ letter-spacing: 0.22em;
 
     line-height: 1.8;
 }
+/* =====================================================
+   NAYAGLOW — STEP 16
+   RITUAL SECTION — PART 2
+   ===================================================== */
 
 
+/* =====================================================
+   8. RITUAL CLOSING
+   ===================================================== */
+
+.ritual-closing {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 65px;
+
+    text-align: center;
+}
+
+
+.ritual-closing-mark {
+    color: var(--gold);
+
+    font-size: 20px;
+}
+
+
+.ritual-closing p {
+    color: var(--green);
+
+    font-family: var(--serif);
+
+    font-size: 24px;
+
+    line-height: 1.2;
+}
+
+
+.ritual-closing p::first-line {
+    color: var(--brown);
+}
+
+
+/* =====================================================
+   9. TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .ritual {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+
+    .ritual-steps {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ritual-step {
+        min-height: auto;
+
+        padding:
+            30px 30px 40px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    .ritual-step:last-child {
+        border-bottom: 0;
+    }
+
+
+    .ritual-line {
+        margin-bottom: 35px;
+    }
+
+
+    .ritual-content {
+        max-width: 600px;
+    }
+
+}
+
+
+/* =====================================================
+   10. MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .ritual {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+
+    .ritual-step {
+        padding:
+            25px 20px 35px;
+    }
+
+
+    .ritual-top {
+        margin-bottom: 20px;
+    }
+
+
+    .ritual-number {
+        font-size: 22px;
+    }
+
+
+    .ritual-icon {
+        width: 43px;
+        height: 43px;
+
+        font-size: 17px;
+    }
+
+
+    .ritual-line {
+        margin-bottom: 35px;
+    }
+
+
+    .ritual-content h3 {
+        font-size: 37px;
+    }
+
+
+    .ritual-content > p:last-child {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    .ritual-closing {
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 45px;
+    }
+
+
+    .ritual-closing p {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =====================================================
+   11. VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .ritual-content h3 {
+        font-size: 33px;
+    }
+
+
+    .ritual-closing p {
+        font-size: 19px;
+    }
+
+}
