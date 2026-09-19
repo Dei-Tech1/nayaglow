@@ -3167,3 +3167,225 @@ letter-spacing: 0.22em;
     line-height: 1.7;
 }
 
+/* =====================================================
+   NAYAGLOW — STEP 15
+   INGREDIENTS / BOTANICAL INSPIRATION — PART 2
+   ===================================================== */
+
+
+/* =====================================================
+   9. INGREDIENT ARROW
+   ===================================================== */
+
+.ingredient-arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.ingredient-item:hover
+.ingredient-arrow {
+    transform:
+        translate(4px, -4px);
+}
+
+
+/* =====================================================
+   10. INGREDIENTS NOTE
+   ===================================================== */
+
+.ingredients-note {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    max-width: 720px;
+
+    margin-top: 45px;
+}
+
+
+.ingredients-note > span {
+    flex-shrink: 0;
+
+    color: var(--gold);
+
+    font-size: 18px;
+}
+
+
+.ingredients-note p {
+    color: rgba(
+        248,
+        245,
+        238,
+        0.45
+    );
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   11. TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .ingredients {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+
+    .ingredient-item {
+        grid-template-columns:
+            55px 70px 1fr 30px;
+
+        gap: 18px;
+
+        min-height: 120px;
+    }
+
+
+    .ingredient-symbol {
+        width: 55px;
+        height: 55px;
+
+        font-size: 23px;
+    }
+
+
+    .ingredient-content h3 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =====================================================
+   12. MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .ingredients {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+
+    .ingredient-item {
+        grid-template-columns:
+            35px 55px 1fr 20px;
+
+        gap: 12px;
+
+        min-height: 125px;
+
+        padding:
+            18px 0;
+    }
+
+
+    .ingredient-item:hover {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    .ingredient-number {
+        font-size: 19px;
+    }
+
+
+    .ingredient-symbol {
+        width: 48px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+
+    .ingredient-content h3 {
+        margin-bottom: 4px;
+
+        font-size: 25px;
+    }
+
+
+    .ingredient-content p {
+        font-size: 11px;
+
+        line-height: 1.55;
+    }
+
+
+    .ingredient-arrow {
+        font-size: 15px;
+    }
+
+
+    .ingredients-note {
+        margin-top: 30px;
+
+        gap: 10px;
+    }
+
+
+    .ingredients-note p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   13. VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .ingredient-item {
+        grid-template-columns:
+            28px 48px 1fr 15px;
+
+        gap: 8px;
+    }
+
+
+    .ingredient-symbol {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+
+    .ingredient-content h3 {
+        font-size: 22px;
+    }
+
+
+    .ingredient-content p {
+        font-size: 10px;
+    }
+
+}
