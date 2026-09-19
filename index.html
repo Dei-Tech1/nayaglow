@@ -4547,3 +4547,209 @@ letter-spacing: 0.22em;
 
 }
 
+/* =====================================================
+   NAYAGLOW — STEP 19
+   FINAL CTA / CONTACT — PART 1
+   ===================================================== */
+
+
+/* =====================================================
+   1. FINAL CTA SECTION
+   ===================================================== */
+
+.final-cta {
+    position: relative;
+
+    padding:
+        130px 40px 110px;
+
+    background: var(--green);
+
+    color: var(--cream-light);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   2. DECORATIVE BACKGROUND
+   ===================================================== */
+
+.final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    top: -250px;
+    right: -150px;
+
+    width: 600px;
+    height: 600px;
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.18);
+
+    border-radius: 50%;
+}
+
+
+.final-cta::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -300px;
+    left: -200px;
+
+    width: 650px;
+    height: 650px;
+
+    border: 1px solid
+        rgba(248, 245, 238, 0.07);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   3. FINAL CTA INNER
+   ===================================================== */
+
+.final-cta-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        100%,
+        var(--container)
+    );
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   4. FINAL CTA EYEBROW
+   ===================================================== */
+
+.final-cta .eyebrow {
+    color: var(--gold);
+}
+
+
+/* =====================================================
+   5. FINAL CTA TITLE
+   ===================================================== */
+
+.final-cta h2 {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    color: var(--cream-light);
+
+    font-size: clamp(
+        60px,
+        8vw,
+        110px
+    );
+
+    letter-spacing: -0.03em;
+}
+
+
+.final-cta h2 em {
+    color: #d8c3a0;
+}
+
+
+/* =====================================================
+   6. FINAL CTA DESCRIPTION
+   ===================================================== */
+
+.final-cta-text {
+    max-width: 500px;
+
+    margin: 0 auto 40px;
+
+    color: rgba(
+        248,
+        245,
+        238,
+        0.68
+    );
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   7. CTA ACTIONS
+   ===================================================== */
+
+.final-cta-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 75px;
+}
+
+
+/* =====================================================
+   8. EMAIL LINK
+   ===================================================== */
+
+.final-email-link {
+    position: relative;
+
+    color: var(--cream-light);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.final-email-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    background: var(--gold);
+
+    transform:
+        scaleX(0);
+
+    transform-origin: right;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.final-email-link:hover::after {
+    transform:
+        scaleX(1);
+
+    transform-origin: left;
+}
