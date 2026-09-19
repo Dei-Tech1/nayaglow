@@ -2458,32 +2458,35 @@ const translations = {
 
 function changeLanguage(language) {
 
-    const currentLanguage =
-        document.getElementById("currentLanguage");
-
-    const menu =
-        document.getElementById("languageMenu");
-
     const selectedTranslations =
         translations[language];
 
     if (!selectedTranslations) return;
 
 
-    document.querySelectorAll("[data-i18n]").forEach(function (element) {
+    /* Translate all elements */
 
-        const key =
-            element.getAttribute("data-i18n");
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(function (element) {
 
-        if (selectedTranslations[key] !== undefined) {
+            const key =
+                element.getAttribute("data-i18n");
 
-            element.innerHTML =
-                selectedTranslations[key];
+            if (selectedTranslations[key] !== undefined) {
 
-        }
+                element.innerHTML =
+                    selectedTranslations[key];
 
-    });
+            }
 
+        });
+
+
+    /* Update language button */
+
+    const currentLanguage =
+        document.getElementById("currentLanguage");
 
     if (currentLanguage) {
 
@@ -2493,14 +2496,18 @@ function changeLanguage(language) {
     }
 
 
-    if (menu) {
+    /* Close language dropdown */
 
-        menu.classList.remove("active");
+    const selector =
+        document.getElementById("languageSelector");
+
+    if (selector) {
+
+        selector.classList.remove("active");
 
     }
 
 }
-
 
 /* =====================================================
    CLOSE LANGUAGE MENU WHEN CLICKING OUTSIDE
