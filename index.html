@@ -2449,3 +2449,257 @@ letter-spacing: 0.22em;
 }
 
 }
+
+/* =====================================================
+   NAYAGLOW — STEP 14
+   COLLECTION / PRODUCT CARDS — PART 1
+   ===================================================== */
+
+
+/* =====================================================
+   1. COLLECTION SECTION
+   ===================================================== */
+
+.collection {
+    position: relative;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background: var(--cream-light);
+}
+
+
+/* =====================================================
+   2. COLLECTION HEADING
+   ===================================================== */
+
+.collection .section-heading {
+    position: relative;
+}
+
+
+/* =====================================================
+   3. PRODUCT GRID
+   ===================================================== */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =====================================================
+   4. PRODUCT CARD
+   ===================================================== */
+
+.product-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* =====================================================
+   5. PRODUCT VISUAL
+   ===================================================== */
+
+.product-visual {
+    position: relative;
+
+    min-height: 420px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   6. PRODUCT VISUAL BACKGROUNDS
+   ===================================================== */
+
+.product-one {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(178, 138, 82, 0.20),
+            transparent 48%
+        ),
+        #e8dfd0;
+}
+
+
+.product-two {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(41, 75, 61, 0.18),
+            transparent 48%
+        ),
+        #dfe5dc;
+}
+
+
+.product-three {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(91, 68, 53, 0.16),
+            transparent 48%
+        ),
+        #e7ded5;
+}
+
+
+/* =====================================================
+   7. PRODUCT NUMBER
+   ===================================================== */
+
+.product-number {
+    position: absolute;
+
+    top: 20px;
+    left: 22px;
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 24px;
+}
+
+
+/* =====================================================
+   8. PRODUCT PLACEHOLDER
+   ===================================================== */
+
+.product-placeholder {
+    position: relative;
+
+    width: 145px;
+    height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #355849,
+            #17382c
+        );
+
+    border-radius:
+        22px 22px 30px 30px;
+
+    box-shadow:
+        20px 30px 45px
+        rgba(23, 56, 44, 0.20);
+
+    color: var(--cream-light);
+
+    text-align: center;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.product-card:hover
+.product-placeholder {
+    transform:
+        translateY(-8px)
+        rotate(-2deg);
+}
+
+
+/* =====================================================
+   9. PRODUCT CAP
+   ===================================================== */
+
+.product-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    top: -35px;
+
+    width: 68px;
+    height: 42px;
+
+    background: var(--green);
+
+    border-radius:
+        8px 8px 4px 4px;
+}
+
+
+/* =====================================================
+   10. PRODUCT LABEL
+   ===================================================== */
+
+.product-placeholder span {
+    font-family: var(--serif);
+
+    font-size: 23px;
+}
+
+
+.product-placeholder strong {
+    font-size: 21px;
+
+    letter-spacing: 0.14em;
+}
+
+
+.product-placeholder::after {
+    content: "BOTANICAL RITUAL";
+
+    position: absolute;
+
+    bottom: 42px;
+
+    color: rgba(
+        248,
+        245,
+        238,
+        0.65
+    );
+
+    font-size: 7px;
+
+    letter-spacing: 0.20em;
+}
