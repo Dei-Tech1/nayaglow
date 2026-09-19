@@ -2147,3 +2147,305 @@ font-size: 22px;
 letter-spacing: 0;
 
 }
+
+/* =====================================================
+NAYAGLOW — STEP 13
+HERO SECTION — PART 2
+===================================================== */
+
+/* =====================================================
+8. HERO PRODUCT
+===================================================== */
+
+.hero-product {
+position: relative;
+
+z-index: 2;
+
+width: 430px;
+height: 520px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+}
+
+/* =====================================================
+9. PRODUCT ORBITS
+===================================================== */
+
+.product-orbit {
+position: absolute;
+
+border: 1px solid rgba(
+    178,
+    138,
+    82,
+    0.35
+);
+
+border-radius: 50%;
+
+}
+
+.orbit-one {
+width: 430px;
+height: 430px;
+
+transform: rotate(20deg);
+
+}
+
+.orbit-two {
+width: 340px;
+height: 500px;
+
+transform: rotate(-25deg);
+
+}
+
+/* =====================================================
+10. HERO BOTTLE
+===================================================== */
+
+.hero-bottle {
+position: relative;
+
+width: 170px;
+height: 330px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+background:
+    linear-gradient(
+        145deg,
+        #355849,
+        #17382c
+    );
+
+border-radius:
+    28px 28px 38px 38px;
+
+box-shadow:
+    25px 35px 60px
+    rgba(23, 56, 44, 0.25);
+
+color: var(--cream-light);
+
+text-align: center;
+
+}
+
+.hero-bottle::before {
+content: "";
+
+position: absolute;
+
+top: -48px;
+
+width: 82px;
+height: 55px;
+
+background: var(--green);
+
+border-radius: 10px 10px 5px 5px;
+
+}
+
+.hero-bottle span {
+font-family: var(--serif);
+
+font-size: 25px;
+
+}
+
+.hero-bottle strong {
+font-family: var(--sans);
+
+font-size: 24px;
+
+letter-spacing: 0.16em;
+
+}
+
+.hero-bottle small {
+margin-top: 12px;
+
+color: rgba(
+    248,
+    245,
+    238,
+    0.65
+);
+
+font-size: 7px;
+
+letter-spacing: 0.22em;
+
+}
+
+/* =====================================================
+11. HERO MOBILE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+.hero {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding:
+        140px 40px 70px;
+}
+
+
+.hero-content {
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.hero-content h1 {
+    font-size: clamp(
+        58px,
+        11vw,
+        88px
+    );
+}
+
+
+.hero-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hero-actions {
+    justify-content: center;
+}
+
+
+.hero-visual {
+    min-height: 520px;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.hero {
+    min-height: auto;
+
+    padding:
+        125px 20px 50px;
+}
+
+
+.hero-content h1 {
+    font-size: clamp(
+        52px,
+        15vw,
+        72px
+    );
+}
+
+
+.hero-text {
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+}
+
+
+.hero-actions .btn {
+    width: 100%;
+}
+
+
+.hero-visual {
+    min-height: 450px;
+}
+
+
+.hero-product {
+    width: 320px;
+    height: 400px;
+}
+
+
+.hero-glow {
+    width: 340px;
+    height: 340px;
+}
+
+
+.orbit-one {
+    width: 310px;
+    height: 310px;
+}
+
+
+.orbit-two {
+    width: 250px;
+    height: 370px;
+}
+
+
+.hero-bottle {
+    width: 130px;
+    height: 260px;
+}
+
+
+.hero-bottle::before {
+    width: 65px;
+    height: 42px;
+
+    top: -37px;
+}
+
+
+.hero-bottle span {
+    font-size: 21px;
+}
+
+
+.hero-bottle strong {
+    font-size: 18px;
+}
+
+
+.hero-caption {
+    right: 0;
+    bottom: 0;
+
+    font-size: 8px;
+}
+
+
+.botanical-one {
+    font-size: 45px;
+}
+
+
+.botanical-two {
+    font-size: 38px;
+}
+
+}
