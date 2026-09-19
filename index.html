@@ -1,39 +1,221 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NayaGlow — beauté naturelle, soins peau & cheveux et rituels de bien-être à Brazzaville. Découvrez notre univers et contactez-nous sur WhatsApp.">
+  <meta name="theme-color" content="#17382c">
+  <title>NayaGlow — Révélez votre beauté naturelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<title>NayaGlow — Révèle la beauté au naturel</title>
+<div class="preloader" id="preloader">
+  <div class="loader-mark">N</div>
+  <div class="loader-name">NayaGlow</div>
+</div>
 
-<meta name="description"
-content="NayaGlow — Soins naturels pour révéler votre beauté au quotidien. Découvrez nos soins pour la peau et les cheveux à Brazzaville.">
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="index.html" aria-label="NayaGlow">
+    <img src="naya-logo.jpg" alt="NayaGlow">
+    <span>NayaGlow</span>
+  </a>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <nav class="desktop-nav" aria-label="Navigation principale">
+    <a href="#home" data-i18n="navHome">Accueil</a>
+    <a href="#collection" data-i18n="navCollection">Collection</a>
+    <a href="#ritual" data-i18n="navRitual">Rituel</a>
+    <a href="#mothers" data-i18n="navMothers">Pour les mamans</a>
+    <a href="maison.html" data-i18n="navMaison">La Maison</a>
+  </nav>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <div class="header-actions">
+    <div class="language">
+      <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false">🌐 <span id="languageLabel">FR</span>⌄</button>
+      <div class="language-menu" id="languageMenu">
+        <button type="button" data-language="fr">🇫🇷 Français</button>
+        <button type="button" data-language="en">🇬🇧 English</button>
+      </div>
+    </div>
+    <a class="header-cta" href="https://wa.me/242064486804" target="_blank" rel="noopener" data-i18n="navOrder">Commander</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  </div>
+</header>
 
-<style>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-i18n="navHome">Accueil</a>
+  <a href="#collection" data-i18n="navCollection">Collection</a>
+  <a href="#ritual" data-i18n="navRitual">Rituel</a>
+  <a href="#mothers" data-i18n="navMothers">Pour les mamans</a>
+  <a href="maison.html" data-i18n="navMaison">La Maison</a>
+  <a class="mobile-order" href="https://wa.me/242064486804" target="_blank" rel="noopener" data-i18n="navOrder">Commander sur WhatsApp</a>
+</div>
 
-/* =====================================================
-   RESET
-   ===================================================== */
+<main>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="floating-ingredient ingredient-a">SHEA</div>
+  <div class="floating-ingredient ingredient-b">ALOE</div>
+  <div class="floating-ingredient ingredient-c">MORINGA</div>
+  <div class="floating-ingredient ingredient-d">HIBISCUS</div>
 
-html {
-    scroll-behavior: smooth;
-}
+  <div class="hero-copy reveal">
+    <p class="eyebrow" data-i18n="heroEyebrow">BEAUTÉ NATURELLE • BRAZZAVILLE</p>
+    <h1 data-i18n="heroTitle">Votre beauté.<br><em>Votre rituel.</em><br>Votre moment.</h1>
+    <p class="hero-text" data-i18n="heroText">Des soins inspirés par la nature pour prendre soin de votre peau, de vos cheveux et de vous-même avec douceur.</p>
+    <div class="hero-actions">
+      <a class="btn btn-dark" href="#collection" data-i18n="heroButton">Découvrir la collection</a>
+      <a class="text-link" href="maison.html" data-i18n="heroSecond">Découvrir NayaGlow →</a>
+    </div>
+  </div>
 
-body {
-    font-family: "DM Sans", sans-serif;
-    background: #f8f4ec;
+  <div class="hero-art reveal">
+    <div class="sun-disc"></div>
+    <div class="botanical botanical-one">✦</div>
+    <div class="botanical botanical-two">❋</div>
+    <div class="product-orbit">
+      <div class="orbit-ring ring-one"></div>
+      <div class="orbit-ring ring-two"></div>
+      <div class="hero-bottle">
+        <span>Naya</span>
+        <strong>GLOW</strong>
+        <small>BOTANICAL RITUAL</small>
+      </div>
+    </div>
+    <div class="hero-caption"><span>01</span><span data-i18n="heroCaption">NATURE • RITUEL • ÉCLAT</span></div>
+  </div>
+</section>
+
+<section class="ticker" aria-label="NayaGlow">
+  <div class="ticker-track">
+    <span>BEAUTÉ NATURELLE</span><i>✦</i><span>SELF-CARE</span><i>✦</i><span>SKIN & HAIR</span><i>✦</i><span>BRAZZAVILLE</span><i>✦</i>
+    <span>BEAUTÉ NATURELLE</span><i>✦</i><span>SELF-CARE</span><i>✦</i><span>SKIN & HAIR</span><i>✦</i><span>BRAZZAVILLE</span><i>✦</i>
+  </div>
+</section>
+
+<section class="intro section-pad">
+  <div class="section-number">01 /</div>
+  <div class="intro-grid">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="introEyebrow">L'ART DE PRENDRE SOIN DE SOI</p>
+      <h2 data-i18n="introTitle">La beauté ne devrait jamais être une obligation.<br><em>Elle peut être un moment.</em></h2>
+    </div>
+    <div class="intro-copy reveal">
+      <p data-i18n="introText">NayaGlow crée un univers où les soins deviennent un rituel simple, féminin et profondément personnel. Nous voulons rappeler à chaque femme qu'elle mérite de ralentir, de respirer et de prendre soin d'elle.</p>
+      <a class="text-link" href="maison.html" data-i18n="introLink">Notre histoire →</a>
+    </div>
+  </div>
+</section>
+
+<section class="collection section-pad" id="collection">
+  <div class="section-heading reveal">
+    <div>
+      <p class="eyebrow" data-i18n="collectionEyebrow">LA COLLECTION</p>
+      <h2 data-i18n="collectionTitle">Des rituels pensés<br><em>pour vous.</em></h2>
+    </div>
+    <p data-i18n="collectionText">Une présentation premium pour mettre vos futurs produits au premier plan. Les formules et ingrédients définitifs peuvent être renseignés produit par produit.</p>
+  </div>
+
+  <div class="product-grid">
+    <article class="product-card reveal">
+      <div class="product-visual visual-one"><span>01</span><div class="jar">NAYA<br><b>GLOW</b></div></div>
+      <div class="product-info"><p>SKIN RITUAL</p><h3 data-i18n="productOne">Soin Éclat</h3><span data-i18n="productOneText">Une routine douce pour révéler l'éclat naturel.</span><a href="https://wa.me/242064486804?text=Bonjour%20NayaGlow%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20Soin%20Éclat." target="_blank" rel="noopener" data-i18n="discover">Découvrir →</a></div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="product-visual visual-two"><span>02</span><div class="jar">NAYA<br><b>GLOW</b></div></div>
+      <div class="product-info"><p>HAIR RITUAL</p><h3 data-i18n="productTwo">Rituel Cheveux</h3><span data-i18n="productTwoText">Un moment de soin pour nourrir et sublimer vos cheveux.</span><a href="https://wa.me/242064486804?text=Bonjour%20NayaGlow%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20Rituel%20Cheveux." target="_blank" rel="noopener" data-i18n="discover">Découvrir →</a></div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="product-visual visual-three"><span>03</span><div class="jar">NAYA<br><b>GLOW</b></div></div>
+      <div class="product-info"><p>BODY RITUAL</p><h3 data-i18n="productThree">Rituel Corps</h3><span data-i18n="productThreeText">Une parenthèse sensorielle pour votre peau et votre bien-être.</span><a href="https://wa.me/242064486804?text=Bonjour%20NayaGlow%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20Rituel%20Corps." target="_blank" rel="noopener" data-i18n="discover">Découvrir →</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="ingredients section-pad">
+  <div class="ingredient-stage">
+    <div class="ingredient-copy reveal">
+      <p class="eyebrow" data-i18n="ingredientsEyebrow">BOTANIQUE & SENSORIEL</p>
+      <h2 data-i18n="ingredientsTitle">Inspiré par ce que<br><em>la nature offre de précieux.</em></h2>
+      <p data-i18n="ingredientsText">Une direction botanique inspirée des rituels de beauté naturels. Les éléments ci-dessous sont des inspirations visuelles et doivent être confirmés selon les formules réelles de chaque produit.</p>
+    </div>
+    <div class="ingredient-cloud" aria-label="Inspirations botaniques">
+      <span class="leaf-card leaf-1">🌿 <b>Moringa</b></span>
+      <span class="leaf-card leaf-2">🌺 <b>Hibiscus</b></span>
+      <span class="leaf-card leaf-3">🥥 <b>Coco</b></span>
+      <span class="leaf-card leaf-4">🌱 <b>Aloe Vera</b></span>
+      <span class="leaf-card leaf-5">🧈 <b>Beurre de karité</b></span>
+      <span class="leaf-card leaf-6">🌳 <b>Baobab</b></span>
+      <span class="leaf-card leaf-7">🍯 <b>Miel</b></span>
+      <span class="leaf-card leaf-8">🌾 <b>Avoine</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="ritual section-pad" id="ritual">
+  <div class="ritual-image reveal"><div class="water-lines"></div><span>YOUR<br>TIME<br>MATTERS</span></div>
+  <div class="ritual-copy reveal">
+    <p class="eyebrow" data-i18n="ritualEyebrow">LE RITUEL NAYAGLOW</p>
+    <h2 data-i18n="ritualTitle">Quelques minutes pour soi.<br><em>Un autre regard sur la journée.</em></h2>
+    <div class="ritual-steps">
+      <div><b>01</b><span data-i18n="stepOne">Nettoyer avec douceur</span></div>
+      <div><b>02</b><span data-i18n="stepTwo">Nourrir & hydrater</span></div>
+      <div><b>03</b><span data-i18n="stepThree">Respirer & apprécier</span></div>
+    </div>
+    <a class="btn btn-outline" href="https://wa.me/242064486804" target="_blank" rel="noopener" data-i18n="ritualButton">Créer mon rituel</a>
+  </div>
+</section>
+
+<section class="mothers section-pad" id="mothers">
+  <div class="mothers-copy reveal">
+    <p class="eyebrow" data-i18n="mothersEyebrow">POUR LES MAMANS</p>
+    <h2 data-i18n="mothersTitle">Vous prenez soin<br>de tout le monde.<br><em>Et vous ?</em></h2>
+    <p data-i18n="mothersText">Après l'arrivée d'un enfant, les journées changent. NayaGlow veut vous rappeler une chose simple : votre bien-être compte aussi.</p>
+    <a class="btn btn-dark" href="https://wa.me/242064486804" target="_blank" rel="noopener" data-i18n="mothersButton">Parler à NayaGlow</a>
+  </div>
+  <div class="mothers-art reveal"><div class="mother-card"><span>TAKE</span><strong>TIME<br>FOR<br>YOU</strong><small>♡</small></div><div class="floating-dot"></div></div>
+</section>
+
+<section class="quote-section section-pad">
+  <div class="quote-mark">“</div>
+  <blockquote data-i18n="quote">Prendre soin de soi n'est pas du temps perdu. C'est une façon de revenir à soi.</blockquote>
+  <p>NayaGlow</p>
+</section>
+
+<section class="final-cta">
+  <div class="final-inner reveal">
+    <p class="eyebrow" data-i18n="finalEyebrow">VOTRE MOMENT COMMENCE ICI</p>
+    <h2 data-i18n="finalTitle">Prête à créer<br><em>votre rituel ?</em></h2>
+    <a class="btn btn-light" href="https://wa.me/242064486804" target="_blank" rel="noopener" data-i18n="finalButton">Commander sur WhatsApp</a>
+    <p class="contact-line">+242 06 448 6804 · ejaldrinemavoungou67@gmail.com</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-brand">NayaGlow</div><p data-i18n="footerText">Révélez la beauté au naturel.</p></div>
+    <div><small data-i18n="footerExplore">EXPLORER</small><a href="#collection" data-i18n="navCollection">Collection</a><a href="#ritual" data-i18n="navRitual">Rituel</a><a href="maison.html" data-i18n="navMaison">La Maison</a></div>
+    <div><small data-i18n="footerContact">CONTACT</small><a href="tel:+242064486804">+242 06 448 6804</a><a href="mailto:ejaldrinemavoungou67@gmail.com">ejaldrinemavoungou67@gmail.com</a><a href="https://wa.me/242064486804" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 NayaGlow</span><span>Brazzaville • Congo • Worldwide</span><span data-i18n="footerNote">Beauté • Soin • Bien-être</span></div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/242064486804" target="_blank" rel="noopener" aria-label="Contacter NayaGlow sur WhatsApp">
+  <span>✆</span>
+  <i>WhatsApp</i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
     color: #2c241d;
     overflow-x: hidden;
 }
