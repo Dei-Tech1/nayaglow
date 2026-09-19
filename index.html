@@ -1315,45 +1315,38 @@ footer {
         <a href="#contact" class="nav-cta">
             Nous contacter
         </a>
+       
+<!-- LANGUAGE SELECTOR -->
 
-        <!-- LANGUAGE SWITCHER -->
+<div class="language-selector" id="languageSelector">
 
-        <div class="language-switcher" id="languageSelector">
+    <button
+        type="button"
+        class="language-current"
+        onclick="toggleLanguageMenu()">
 
-            <button
-                type="button"
-                class="language-btn"
-                onclick="toggleLanguageMenu()">
+        🌐 <span id="currentLanguage">FR</span>
+        <span>▾</span>
 
-                🌐 <span id="currentLanguage">FR</span>
-                <span>▾</span>
+    </button>
 
-            </button>
+    <div class="language-menu" id="languageMenu">
 
-            <div
-                class="language-menu"
-                id="languageMenu">
+        <button
+            type="button"
+            onclick="changeLanguage('fr')">
+            🇫🇷 Français
+        </button>
 
-                <button
-                    type="button"
-                    onclick="changeLanguage('fr')">
+        <button
+            type="button"
+            onclick="changeLanguage('en')">
+            🇬🇧 English
+        </button>
 
-                    🇫🇷 Français
+    </div>
 
-                </button>
-
-                <button
-                    type="button"
-                    onclick="changeLanguage('en')">
-
-                    🇬🇧 English
-
-                </button>
-
-            </div>
-
-        </div>
-
+</div>
     </nav>
 
     <button
