@@ -4292,3 +4292,142 @@ letter-spacing: 0.22em;
     }
 
 }
+
+/* =====================================================
+   NAYAGLOW — STEP 18
+   QUOTE SECTION — PART 1
+   ===================================================== */
+
+
+/* =====================================================
+   1. QUOTE SECTION
+   ===================================================== */
+
+.quote-section {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        100px 40px;
+
+    background: var(--brown);
+
+    color: var(--cream-light);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   2. DECORATIVE CIRCLES
+   ===================================================== */
+
+.quote-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: -220px;
+    left: -180px;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid
+        rgba(248, 245, 238, 0.10);
+
+    border-radius: 50%;
+}
+
+
+.quote-section::after {
+    content: "";
+
+    position: absolute;
+
+    right: -200px;
+    bottom: -250px;
+
+    width: 560px;
+    height: 560px;
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.22);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   3. QUOTE INNER
+   ===================================================== */
+
+.quote-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        100%,
+        900px
+    );
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   4. QUOTE MARK
+   ===================================================== */
+
+.quote-mark {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 100px;
+
+    line-height: 0.5;
+}
+
+
+/* =====================================================
+   5. QUOTE
+   ===================================================== */
+
+.quote-inner blockquote {
+    color: var(--cream-light);
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        43px,
+        5.5vw,
+        72px
+    );
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.02em;
+}
+
+
+.quote-inner blockquote em {
+    color: #d8c3a0;
+
+    font-style: italic;
+}
