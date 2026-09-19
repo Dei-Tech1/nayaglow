@@ -3389,3 +3389,212 @@ letter-spacing: 0.22em;
     }
 
 }
+
+/* =====================================================
+   NAYAGLOW — STEP 16
+   RITUAL SECTION — PART 1
+   ===================================================== */
+
+
+/* =====================================================
+   1. RITUAL SECTION
+   ===================================================== */
+
+.ritual {
+    position: relative;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background: var(--cream);
+}
+
+
+/* =====================================================
+   2. RITUAL HEADING
+   ===================================================== */
+
+.ritual-heading {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.ritual-heading h2 {
+    color: var(--green);
+}
+
+
+.ritual-heading h2 em {
+    color: var(--brown);
+}
+
+
+/* =====================================================
+   3. RITUAL STEPS
+   ===================================================== */
+
+.ritual-steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =====================================================
+   4. RITUAL STEP
+   ===================================================== */
+
+.ritual-step {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 35px 35px 40px;
+
+    border-right: 1px solid var(--border);
+
+    transition:
+        background 0.4s ease;
+}
+
+
+.ritual-step:last-child {
+    border-right: 0;
+}
+
+
+.ritual-step:hover {
+    background:
+        rgba(178, 138, 82, 0.05);
+}
+
+
+/* =====================================================
+   5. RITUAL TOP
+   ===================================================== */
+
+.ritual-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.ritual-number {
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+}
+
+
+.ritual-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.40);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 19px;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+
+.ritual-step:hover
+.ritual-icon {
+    transform:
+        rotate(15deg)
+        scale(1.08);
+
+    background:
+        rgba(178, 138, 82, 0.08);
+}
+
+
+/* =====================================================
+   6. RITUAL LINE
+   ===================================================== */
+
+.ritual-line {
+    width: 100%;
+    height: 1px;
+
+    margin-bottom: 55px;
+
+    background:
+        var(--border);
+}
+
+
+/* =====================================================
+   7. RITUAL CONTENT
+   ===================================================== */
+
+.ritual-content {
+    max-width: 320px;
+}
+
+
+.ritual-label {
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.ritual-content h3 {
+    margin-bottom: 22px;
+
+    color: var(--green);
+
+    font-size: 43px;
+
+    line-height: 0.95;
+}
+
+
+.ritual-content h3 em {
+    color: var(--brown);
+}
+
+
+.ritual-content > p:last-child {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
