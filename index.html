@@ -1933,3 +1933,217 @@ border: 0;
 }
 
 }
+/* =====================================================
+NAYAGLOW — STEP 13
+HERO SECTION — PART 1
+===================================================== */
+
+/* =====================================================
+
+1. HERO SECTION
+   ===================================================== */
+
+.hero {
+position: relative;
+
+min-height: 100vh;
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+align-items: center;
+
+gap: 70px;
+
+padding:
+    150px 60px 80px;
+
+background:
+    radial-gradient(
+        circle at 75% 45%,
+        rgba(178, 138, 82, 0.10),
+        transparent 35%
+    ),
+    var(--cream);
+
+overflow: hidden;
+
+}
+
+/* =====================================================
+2. HERO CONTENT
+===================================================== */
+
+.hero-content {
+position: relative;
+
+z-index: 2;
+
+width: min(
+    100%,
+    650px
+);
+
+margin-left: auto;
+
+}
+
+.hero-content h1 {
+margin-bottom: 30px;
+
+color: var(--green);
+
+font-size: clamp(
+    64px,
+    7vw,
+    108px
+);
+
+letter-spacing: -0.03em;
+
+}
+
+.hero-content h1 em {
+color: var(--brown);
+}
+
+.hero-text {
+max-width: 470px;
+
+margin-bottom: 35px;
+
+color: var(--muted);
+
+font-size: 16px;
+
+line-height: 1.9;
+
+}
+
+/* =====================================================
+3. HERO ACTIONS
+===================================================== */
+
+.hero-actions {
+display: flex;
+
+align-items: center;
+
+gap: 25px;
+
+flex-wrap: wrap;
+
+}
+
+/* =====================================================
+4. HERO VISUAL
+===================================================== */
+
+.hero-visual {
+position: relative;
+
+min-height: 620px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+}
+
+/* =====================================================
+5. HERO GLOW
+===================================================== */
+
+.hero-glow {
+position: absolute;
+
+width: 520px;
+height: 520px;
+
+border-radius: 50%;
+
+background:
+    radial-gradient(
+        circle,
+        rgba(178, 138, 82, 0.20),
+        rgba(178, 138, 82, 0.04) 55%,
+        transparent 72%
+    );
+
+filter: blur(5px);
+
+}
+
+/* =====================================================
+6. BOTANICAL DECORATION
+===================================================== */
+
+.hero-botanical {
+position: absolute;
+
+color: var(--gold);
+
+font-family: var(--serif);
+
+opacity: 0.65;
+
+pointer-events: none;
+
+}
+
+.botanical-one {
+top: 13%;
+right: 10%;
+
+font-size: 70px;
+
+transform: rotate(18deg);
+
+}
+
+.botanical-two {
+bottom: 12%;
+left: 8%;
+
+font-size: 55px;
+
+transform: rotate(-20deg);
+
+}
+
+/* =====================================================
+7. HERO CAPTION
+===================================================== */
+
+.hero-caption {
+position: absolute;
+
+right: 5%;
+bottom: 5%;
+
+display: flex;
+
+align-items: center;
+
+gap: 14px;
+
+color: var(--muted);
+
+font-size: 10px;
+
+letter-spacing: 0.18em;
+
+}
+
+.hero-caption span:first-child {
+color: var(--gold);
+
+font-family: var(--serif);
+
+font-size: 22px;
+
+letter-spacing: 0;
+
+}
