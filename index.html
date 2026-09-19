@@ -10,15 +10,21 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>NayaGlow — Révèle la beauté au naturel</title>
-
     <meta
         name="description"
-        content="NayaGlow — Soins naturels pour la peau et les cheveux à Brazzaville."
+        content="NayaGlow — beauté naturelle, soins de la peau et des cheveux à Brazzaville."
     >
 
-    <!-- GOOGLE FONTS -->
+    <meta
+        name="theme-color"
+        content="#17382c"
+    >
 
+    <title>
+        NayaGlow — Révélez votre beauté naturelle
+    </title>
+
+    <!-- Google Fonts -->
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -31,12 +37,11 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-    <!-- MAIN CSS -->
-
+    <!-- Main stylesheet -->
     <link
         rel="stylesheet"
         href="style.css"
@@ -44,222 +49,25 @@
 
 </head>
 
+
 <body>
 
-    <!-- =====================================================
-         PRELOADER
-         ===================================================== -->
-
-    <div class="preloader">
-
-        <div class="preloader-logo">
-            NayaGlow
-        </div>
-
-    </div>
 
     <!-- =====================================================
-         HEADER
+         NAYAGLOW WEBSITE
          ===================================================== -->
 
-    <header id="header">
 
-        <div class="navbar">
+    <main id="app">
 
-            <a href="#home" class="logo">
+        <!-- Website sections will be added here -->
 
-                <img
-                    src="naya-logo.jpg"
-                    alt="NayaGlow"
-                >
-
-            </a>
-
-            <nav
-                class="nav-links"
-                id="navLinks"
-            >
-
-                <a href="#home">
-                    Accueil
-                </a>
-
-                <a href="#products">
-                    Collection
-                </a>
-
-                <a href="#routine">
-                    Rituel
-                </a>
-
-                <a href="#mothers">
-                    Pour les mamans
-                </a>
-
-                <a href="#about">
-                    La Maison
-                </a>
-
-                <a
-                    href="#contact"
-                    class="nav-cta"
-                >
-                    Commander
-                </a>
-
-                <!-- LANGUAGE SELECTOR -->
-
-                <div
-                    class="language-selector"
-                    id="languageSelector"
-                >
-
-                    <button
-                        type="button"
-                        class="language-current"
-                        onclick="toggleLanguageMenu()"
-                    >
-
-                        🌐
-                        <span id="currentLanguage">
-                            FR
-                        </span>
-
-                        <span>
-                            ▾
-                        </span>
-
-                    </button>
-
-                    <div
-                        class="language-menu"
-                        id="languageMenu"
-                    >
-
-                        <button
-                            type="button"
-                            onclick="changeLanguage('fr')"
-                        >
-                            🇫🇷 Français
-                        </button>
-
-                        <button
-                            type="button"
-                            onclick="changeLanguage('en')"
-                        >
-                            🇬🇧 English
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </nav>
-
-            <!-- MOBILE MENU -->
-
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                aria-label="Menu"
-            >
-                ☰
-            </button>
-
-        </div>
-
-    </header>
-
-    <!-- =====================================================
-         HOME / HERO
-         ===================================================== -->
-
-    <section id="home" class="hero">
-
-        <div class="hero-inner">
-
-            <div class="hero-content">
-
-                <div
-                    class="hero-label"
-                    data-i18n="heroLabel"
-                >
-                    BEAUTÉ NATURELLE • BRAZZAVILLE
-                </div>
-
-                <h1>
-
-                    <span data-i18n="heroTitle1">
-                        Votre beauté.
-                    </span>
-
-                    <br>
-
-                    <em data-i18n="heroTitle2">
-                        Votre rituel.
-                    </em>
-
-                    <br>
-
-                    <span data-i18n="heroTitle3">
-                        Votre moment.
-                    </span>
-
-                </h1>
-
-                <p data-i18n="heroText">
-                    Des soins inspirés par la nature pour prendre soin
-                    de votre peau, de vos cheveux et de vous-même avec douceur.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#products"
-                        class="btn primary"
-                        data-i18n="heroButton1"
-                    >
-                        Découvrir la collection
-                    </a>
-
-                    <a
-                        href="#about"
-                        class="btn secondary"
-                        data-i18n="heroButton2"
-                    >
-                        Découvrir NayaGlow
-                    </a>
-
-                </div>
-
-            </div>
+    </main>
 
 
-            <div class="hero-visual">
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
 
-                <div class="hero-circle">
+</body>
 
-                    <div class="hero-circle-content">
-
-                        <span>
-                            NAYA
-                        </span>
-
-                        <strong>
-                            GLOW
-                        </strong>
-
-                        <span>
-                            BOTANICAL RITUAL
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>    
-    
+</html>
