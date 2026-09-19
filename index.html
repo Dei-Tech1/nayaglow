@@ -2417,11 +2417,12 @@ const translations = {
         benefitWellbeingTitle: "Well-being",
 
         benefitWellbeingText:
-            "Taking care of yourself also means taking time to breathe."
-               /* FOR MOTHERS */
+            "Taking care of yourself also means taking time to breathe.",
+
+        /* FOR MOTHERS */
 
         mothersLabel: "For Mothers",
-
+       
         mothersTitleStart:
             "You take care<br>of everyone.",
 
@@ -2511,17 +2512,14 @@ function changeLanguage(language) {
 
 document.addEventListener("click", function (event) {
 
-    const switcher =
-        document.querySelector(".language-switcher");
+    const selector =
+        document.getElementById("languageSelector");
 
-    const menu =
-        document.getElementById("languageMenu");
+    if (!selector) return;
 
-    if (!switcher || !menu) return;
+    if (!selector.contains(event.target)) {
 
-    if (!switcher.contains(event.target)) {
-
-        menu.classList.remove("active");
+        selector.classList.remove("active");
 
     }
 
