@@ -3774,3 +3774,274 @@ letter-spacing: 0.22em;
     }
 
 }
+/* =====================================================
+   NAYAGLOW — STEP 17
+   POUR LES MAMANS — PART 1
+   ===================================================== */
+
+
+/* =====================================================
+   1. MOTHERS SECTION
+   ===================================================== */
+
+.mothers {
+    position: relative;
+
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    background: var(--cream-light);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   2. MOTHERS LAYOUT
+   ===================================================== */
+
+.mothers-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+
+/* =====================================================
+   3. MOTHERS VISUAL
+   ===================================================== */
+
+.mothers-visual {
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   4. MOTHERS FRAME
+   ===================================================== */
+
+.mothers-frame {
+    position: relative;
+
+    width: min(
+        430px,
+        100%
+    );
+
+    aspect-ratio: 4 / 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e5dccd,
+            #d7c8b5
+        );
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.35);
+
+    box-shadow:
+        25px 35px 70px
+        rgba(23, 56, 44, 0.10);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   5. FRAME DECORATION
+   ===================================================== */
+
+.mothers-frame::before {
+    content: "";
+
+    position: absolute;
+
+    width: 72%;
+    height: 72%;
+
+    border: 1px solid
+        rgba(23, 56, 44, 0.15);
+
+    border-radius: 50%;
+}
+
+
+.mothers-frame::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45%;
+    height: 45%;
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.30);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(25deg);
+}
+
+
+/* =====================================================
+   6. MOTHERS NUMBER
+   ===================================================== */
+
+.mothers-number {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   7. MOTHERS SYMBOL
+   ===================================================== */
+
+.mothers-symbol {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid
+        rgba(178, 138, 82, 0.45);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 38px;
+
+    background:
+        rgba(248, 245, 238, 0.25);
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.mothers-frame:hover
+.mothers-symbol {
+    transform:
+        rotate(12deg)
+        scale(1.06);
+}
+
+
+/* =====================================================
+   8. MOTHERS FRAME TEXT
+   ===================================================== */
+
+.mothers-frame p {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 30px;
+
+    color: var(--green);
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   9. MOTHERS CONTENT
+   ===================================================== */
+
+.mothers-content {
+    max-width: 620px;
+}
+
+
+.mothers-content h2 {
+    margin-bottom: 30px;
+
+    color: var(--green);
+
+    font-size: clamp(
+        52px,
+        6vw,
+        78px
+    );
+}
+
+
+.mothers-content h2 em {
+    color: var(--brown);
+}
+
+
+.mothers-intro {
+    margin-bottom: 22px;
+
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 1.85;
+}
+
+
+.mothers-content > p:not(.eyebrow):not(.mothers-intro) {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+}
+
+
