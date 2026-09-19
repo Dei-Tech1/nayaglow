@@ -1222,14 +1222,14 @@ footer {
 }
 
    /* =====================================================
-   LANGUAGE SWITCHER
+   LANGUAGE SELECTOR
    ===================================================== */
 
-.language-switcher {
+.language-selector {
     position: relative;
 }
 
-.language-btn {
+.language-current {
     border: 1px solid var(--gold);
     background: transparent;
     color: var(--brown);
@@ -1239,7 +1239,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.language-btn:hover {
+.language-current:hover {
     background: var(--gold);
     color: white;
 }
@@ -1256,7 +1256,7 @@ footer {
     z-index: 2000;
 }
 
-.language-menu.active {
+.language-selector.active .language-menu {
     display: block;
 }
 
@@ -1276,10 +1276,6 @@ footer {
     background: #f1e8d8;
     color: var(--gold);
 }
-   
-</style>
-</head>
-<body>
    
 
    <!-- =====================================================
