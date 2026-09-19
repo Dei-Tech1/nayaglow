@@ -1304,40 +1304,65 @@ footer {
 
     <nav class="nav-links" id="navLinks">
 
-    <a href="#home">Accueil</a>
-    <a href="#products">Produits</a>
-    <a href="#about">À propos</a>
-    <a href="#why">Pourquoi NayaGlow</a>
-    <a href="#mother">Pour les mamans</a>
-    <a href="#routine">Routine</a>
-    <a href="#testimonials">Témoignages</a>
+        <a href="#home">Accueil</a>
+        <a href="#products">Produits</a>
+        <a href="#about">À propos</a>
+        <a href="#why">Pourquoi NayaGlow</a>
+        <a href="#mothers">Pour les mamans</a>
+        <a href="#routine">Routine</a>
+        <a href="#testimonials">Témoignages</a>
 
-    <a href="#contact" class="nav-cta">Nous contacter</a>
+        <a href="#contact" class="nav-cta">
+            Nous contacter
+        </a>
 
-    <div class="language-switcher">
+        <!-- LANGUAGE SWITCHER -->
 
-        <button class="language-btn" onclick="toggleLanguageMenu()">
-            🌐 <span id="currentLanguage">FR</span>
-        </button>
+        <div class="language-switcher" id="languageSelector">
 
-        <div class="language-menu" id="languageMenu">
+            <button
+                type="button"
+                class="language-btn"
+                onclick="toggleLanguageMenu()">
 
-            <button onclick="changeLanguage('fr')">
-                🇫🇷 Français
+                🌐 <span id="currentLanguage">FR</span>
+                <span>▾</span>
+
             </button>
 
-            <button onclick="changeLanguage('en')">
-                🇬🇧 English
-            </button>
+            <div
+                class="language-menu"
+                id="languageMenu">
+
+                <button
+                    type="button"
+                    onclick="changeLanguage('fr')">
+
+                    🇫🇷 Français
+
+                </button>
+
+                <button
+                    type="button"
+                    onclick="changeLanguage('en')">
+
+                    🇬🇧 English
+
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
+    </nav>
 
-</nav>
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Menu">
 
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">
         ☰
+
     </button>
 
 </header>
