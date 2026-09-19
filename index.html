@@ -4431,3 +4431,119 @@ letter-spacing: 0.22em;
 
     font-style: italic;
 }
+
+/* =====================================================
+   NAYAGLOW — STEP 18
+   QUOTE SECTION — PART 2
+   ===================================================== */
+
+
+/* =====================================================
+   6. QUOTE SIGNATURE
+   ===================================================== */
+
+.quote-signature {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 40px;
+}
+
+
+.quote-signature p {
+    color: var(--cream-light);
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+
+    letter-spacing: 0.05em;
+}
+
+
+.quote-line {
+    width: 55px;
+    height: 1px;
+
+    background:
+        rgba(248, 245, 238, 0.30);
+}
+
+
+/* =====================================================
+   7. MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .quote-section {
+        min-height: 430px;
+
+        padding:
+            80px 20px;
+    }
+
+
+    .quote-mark {
+        margin-bottom: 10px;
+
+        font-size: 75px;
+    }
+
+
+    .quote-inner blockquote {
+        font-size: clamp(
+            36px,
+            10vw,
+            50px
+        );
+
+        line-height: 1.08;
+    }
+
+
+    .quote-signature {
+        margin-top: 30px;
+
+        gap: 12px;
+    }
+
+
+    .quote-signature p {
+        font-size: 19px;
+    }
+
+
+    .quote-line {
+        width: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   8. VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .quote-section {
+        min-height: 400px;
+    }
+
+
+    .quote-inner blockquote {
+        font-size: 32px;
+    }
+
+
+    .quote-mark {
+        font-size: 65px;
+    }
+
+}
+
