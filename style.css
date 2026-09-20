@@ -3820,3 +3820,83 @@ body::before {
   }
 
 }
+
+/* =========================================================
+   NAYAGLOW — FOREST + WATERFALL MIDDLE EXPERIENCE
+========================================================= */
+
+.collection,
+.ritual,
+.botanical,
+.mothers,
+.story,
+.quote {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(5, 25, 20, .72),
+      rgba(7, 35, 28, .78)
+    ),
+    url("Premium_luxury_natural_skincare_website_background_photograp.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Soft cinematic atmosphere over the forest */
+.collection::before,
+.ritual::before,
+.botanical::before,
+.mothers::before,
+.story::before,
+.quote::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(121,170,160,.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(200,165,106,.10),
+      transparent 35%
+    );
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep all existing content above the background */
+.collection > *,
+.ritual > *,
+.botanical > *,
+.mothers > *,
+.story > *,
+.quote > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile performance */
+@media (max-width: 700px) {
+
+  .collection,
+  .ritual,
+  .botanical,
+  .mothers,
+  .story,
+  .quote {
+    background-attachment: scroll;
+    background-position: center;
+  }
+
+}
+
