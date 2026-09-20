@@ -1350,4 +1350,1000 @@ button {
   letter-spacing: .18em;
 }
 
-.botanica
+/* =========================================================
+   BOTANICAL ITEMS
+========================================================= */
+
+.botanical-center strong {
+  display: block;
+  margin-top: 4px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  letter-spacing: -.04em;
+}
+
+.botanical-item {
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.04);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-size: 18px;
+}
+
+.botanical-item span {
+  margin-top: 3px;
+
+  color: rgba(248,244,237,.65);
+
+  font-size: 7px;
+  letter-spacing: .1em;
+}
+
+.botanical-item-one {
+  top: 2%;
+  left: 42%;
+}
+
+.botanical-item-two {
+  top: 25%;
+  right: 2%;
+}
+
+.botanical-item-three {
+  bottom: 5%;
+  right: 18%;
+}
+
+.botanical-item-four {
+  bottom: 8%;
+  left: 12%;
+}
+
+.botanical-item-five {
+  top: 25%;
+  left: 0;
+}
+
+
+/* =========================================================
+   RITUAL
+========================================================= */
+
+.ritual-section {
+  display: grid;
+  gap: 55px;
+
+  background: #e9e1d5;
+}
+
+.ritual-visual {
+  position: relative;
+
+  min-height: 350px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+
+  background:
+    radial-gradient(circle, rgba(200,165,106,.22), transparent 45%),
+    #d8cbbb;
+}
+
+.ritual-glow {
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(200,165,106,.18);
+
+  filter: blur(25px);
+
+  animation: ritualGlow 4s ease-in-out infinite;
+}
+
+@keyframes ritualGlow {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.ritual-circle {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(20,35,29,.22);
+  border-radius: 50%;
+
+  color: var(--forest);
+
+  text-align: center;
+
+  letter-spacing: .15em;
+
+  animation: slowRotate 12s linear infinite;
+}
+
+@keyframes slowRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ritual-circle span {
+  font-size: 8px;
+}
+
+.ritual-circle strong {
+  margin: 6px 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 35px;
+  letter-spacing: -.06em;
+}
+
+.ritual-content {
+  max-width: 600px;
+}
+
+.ritual-content > p:not(.section-eyebrow) {
+  margin-top: 22px;
+
+  color: #73776f;
+
+  font-size: 15px;
+}
+
+.ritual-steps {
+  margin: 30px 0;
+}
+
+.ritual-step {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid rgba(20,35,29,.12);
+}
+
+.ritual-step span {
+  color: var(--gold);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ritual-step p {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   MOTHERS
+========================================================= */
+
+.mothers-section {
+  display: grid;
+  gap: 50px;
+
+  background: var(--forest);
+  color: var(--cream);
+}
+
+.mothers-content {
+  max-width: 650px;
+}
+
+.mothers-content > p:not(.section-eyebrow) {
+  margin-top: 24px;
+
+  color: rgba(248,244,237,.65);
+
+  font-size: 15px;
+}
+
+.mothers-content .btn {
+  margin-top: 28px;
+}
+
+.mothers-visual {
+  position: relative;
+
+  min-height: 390px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-lg);
+
+  background:
+    radial-gradient(circle at center, rgba(200,165,106,.18), transparent 55%),
+    #172b22;
+
+  overflow: hidden;
+}
+
+.mother-glow {
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  background: rgba(200,165,106,.14);
+
+  filter: blur(40px);
+
+  animation: motherGlow 6s ease-in-out infinite;
+}
+
+@keyframes motherGlow {
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+.mother-card {
+  position: relative;
+  z-index: 2;
+
+  width: 190px;
+  height: 250px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.1),
+      rgba(255,255,255,.03)
+    );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transform: rotate(-5deg);
+
+  box-shadow: 0 30px 60px rgba(0,0,0,.2);
+
+  animation: motherCardFloat 5s ease-in-out infinite;
+}
+
+@keyframes motherCardFloat {
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+.mother-card small {
+  color: var(--gold-light);
+
+  font-size: 7px;
+  letter-spacing: .2em;
+}
+
+.mother-card strong {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 29px;
+  line-height: .9;
+  letter-spacing: -.05em;
+}
+
+.mother-card span {
+  align-self: flex-end;
+
+  color: var(--gold-light);
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-section {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.story-number {
+  position: absolute;
+
+  top: 25px;
+  right: 6%;
+
+  color: rgba(20,35,29,.08);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 130px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.story-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+.story-content > p:last-child {
+  max-width: 600px;
+
+  margin-top: 28px;
+
+  color: #72776e;
+
+  font-size: 15px;
+}
+
+.story-badge {
+  width: 150px;
+  height: 150px;
+
+  margin-top: 55px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border: 1px solid rgba(20,35,29,.2);
+  border-radius: 50%;
+
+  color: #77796f;
+
+  font-size: 7px;
+  letter-spacing: .2em;
+
+  animation: badgeFloat 5s ease-in-out infinite;
+}
+
+.story-badge strong {
+  color: var(--forest);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+}
+
+@keyframes badgeFloat {
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-section {
+  padding: 100px 6%;
+
+  background: var(--gold);
+
+  color: var(--forest-deep);
+}
+
+.quote-inner {
+  max-width: 900px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.quote-mark {
+  display: block;
+
+  font-family: Georgia, serif;
+  font-size: 70px;
+  line-height: .6;
+
+  opacity: .35;
+}
+
+blockquote {
+  margin-top: 25px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(28px, 7vw, 60px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.quote-inner p {
+  margin-top: 25px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .25em;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+  position: relative;
+
+  min-height: 600px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 90px 6%;
+
+  overflow: hidden;
+
+  background: var(--forest-deep);
+  color: var(--cream);
+}
+
+.final-glow {
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background: rgba(200,165,106,.12);
+
+  filter: blur(70px);
+
+  animation: finalGlow 8s ease-in-out infinite;
+}
+
+@keyframes finalGlow {
+  0%,100% {
+    transform: translate(-80px,20px);
+  }
+
+  50% {
+    transform: translate(80px,-30px);
+  }
+}
+
+.final-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+
+  text-align: center;
+}
+
+.final-content h2 {
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(45px, 10vw, 90px);
+  line-height: .95;
+
+  letter-spacing: -.06em;
+}
+
+.final-content > p:not(.section-eyebrow) {
+  max-width: 500px;
+
+  margin: 25px auto;
+
+  color: rgba(248,244,237,.65);
+
+  font-size: 14px;
+}
+
+.final-contact {
+  margin-top: 35px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  color: rgba(248,244,237,.45);
+
+  font-size: 9px;
+  letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  padding: 60px 6% 25px;
+
+  background: #09120e;
+  color: var(--cream);
+}
+
+.footer-main {
+  display: grid;
+  gap: 40px;
+
+  padding-bottom: 50px;
+
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand > a {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.footer-brand p {
+  margin-top: 10px;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column small {
+  margin-bottom: 5px;
+
+  color: var(--gold);
+
+  font-size: 8px;
+  letter-spacing: .2em;
+}
+
+.footer-column a {
+  color: rgba(248,244,237,.65);
+
+  font-size: 12px;
+
+  transition: .25s ease;
+}
+
+.footer-column a:hover {
+  color: var(--gold-light);
+}
+
+.footer-world {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  color: rgba(248,244,237,.25);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding-top: 22px;
+
+  color: rgba(248,244,237,.35);
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-float {
+  position: fixed;
+
+  right: 18px;
+  bottom: 20px;
+
+  z-index: 3000;
+
+  min-width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border-radius: 50px;
+
+  background: #1f9d63;
+  color: white;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.25),
+    0 0 0 0 rgba(31,157,99,.35);
+
+  animation:
+    whatsappFloat 4s ease-in-out infinite,
+    whatsappPulse 2.5s infinite;
+
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+}
+
+.whatsapp-icon {
+  font-size: 22px;
+}
+
+.whatsapp-label {
+  display: none;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.whatsapp-pulse {
+  position: absolute;
+  inset: -5px;
+
+  border: 1px solid rgba(31,157,99,.4);
+  border-radius: inherit;
+
+  pointer-events: none;
+}
+
+@keyframes whatsappFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.25),
+      0 0 0 0 rgba(31,157,99,.4);
+  }
+
+  70% {
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.25),
+      0 0 0 12px rgba(31,157,99,0);
+  }
+
+  100% {
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.25),
+      0 0 0 0 rgba(31,157,99,0);
+  }
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+========================================================= */
+
+@media (min-width: 700px) {
+
+  .site-header {
+    padding: 0 4%;
+  }
+
+  .header-cta {
+    display: inline-flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .hero {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1.05fr .95fr;
+    gap: 30px;
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-image {
+    min-height: 300px;
+  }
+
+  .section-heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .intro-layout {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .botanical-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ritual-section {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .mothers-section {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .whatsapp-float {
+    right: 25px;
+    bottom: 25px;
+  }
+
+  .whatsapp-label {
+    display: inline;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1000px) {
+
+  .site-header {
+    padding: 0 5%;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin-left: auto;
+    margin-right: 30px;
+  }
+
+  .desktop-nav a {
+    position: relative;
+
+    color: rgba(248,244,237,.7);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: .3s ease;
+  }
+
+  .desktop-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: .3s ease;
+  }
+
+  .desktop-nav a:hover {
+    color: var(--cream);
+  }
+
+  .desktop-nav a:hover::after {
+    width: 100%;
+  }
+
+  .language-toggle {
+    height: 34px;
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: clamp(70px, 8vw, 115px);
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section-space {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  .ritual-visual,
+  .mothers-visual {
+    min-height: 500px;
+  }
+
+  .mother-card {
+    width: 240px;
+    height: 320px;
+  }
+
+  .mother-card strong {
+    font-size: 38px;
+  }
+
+  .footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .brand span {
+    display: none;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .orbit-two {
+    width: 290px;
+    height: 290px;
+  }
+
+  .orbit-one {
+    width: 230px;
+    height: 230px;
+  }
+
+  .visual-tag {
+    font-size: 6px;
+  }
+
+  .section-space {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+}
