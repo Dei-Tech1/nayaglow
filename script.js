@@ -14,10 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const revealElements = document.querySelectorAll(".reveal");
 
 
-/* =================================================
-   PRELOADER
-================================================= */
-
 window.addEventListener("load", () => {
 
   setTimeout(() => {
@@ -28,10 +24,10 @@ window.addEventListener("load", () => {
       preloader.classList.add("hide");
     }
 
-  }, 2500);
+  }, 500);
 
 });
-
+   
   /* =================================================
      HEADER
   ================================================= */
