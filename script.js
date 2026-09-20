@@ -225,3 +225,29 @@ if (siteHeader) {
     });
 
 }
+
+                          /* =================================================
+   SMOOTH SCROLLING
+   ================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (event) {
+
+        const targetId = this.getAttribute("href");
+        const target = document.querySelector(targetId);
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});
