@@ -1,1 +1,842 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="La Maison NayaGlow — une vision de la beauté née au Congo, enracinée en Afrique et pensée pour le monde."
+  >
+
+  <meta
+    name="theme-color"
+    content="#17251f"
+  >
+
+  <title>La Maison — NayaGlow</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     PRELOADER
+================================================= -->
+
+<div
+  class="preloader"
+  id="preloader"
+>
+
+  <div class="loader-mark">
+    N
+  </div>
+
+  <div class="loader-name">
+    NayaGlow
+  </div>
+
+</div>
+
+
+
+<!-- =================================================
+     HEADER
+================================================= -->
+
+<header
+  class="site-header"
+  id="siteHeader"
+>
+
+  <a
+    class="brand"
+    href="index.html"
+  >
+
+    <img
+      src="naya-logo.jpg"
+      alt="NayaGlow"
+    >
+
+    <span>
+      NayaGlow
+    </span>
+
+  </a>
+
+
+  <nav class="desktop-nav">
+
+    <a
+      href="index.html#home"
+      data-i18n="navHome"
+    >
+      Accueil
+    </a>
+
+    <a
+      href="index.html#collection"
+      data-i18n="navCollection"
+    >
+      Collection
+    </a>
+
+    <a
+      href="index.html#ritual"
+      data-i18n="navRitual"
+    >
+      Rituel
+    </a>
+
+    <a
+      href="index.html#mothers"
+      data-i18n="navMothers"
+    >
+      Pour les mamans
+    </a>
+
+    <a
+      href="maison.html"
+      data-i18n="navMaison"
+    >
+      La Maison
+    </a>
+
+  </nav>
+
+
+  <div class="header-actions">
+
+
+    <!-- LANGUAGE -->
+
+    <div class="language">
+
+      <button
+        class="language-toggle"
+        id="languageToggle"
+        type="button"
+        aria-expanded="false"
+      >
+
+        🌐
+
+        <span id="languageLabel">
+          FR
+        </span>
+
+        ⌄
+
+      </button>
+
+
+      <div
+        class="language-menu"
+        id="languageMenu"
+      >
+
+        <button
+          type="button"
+          data-language="fr"
+        >
+          🇫🇷 Français
+        </button>
+
+        <button
+          type="button"
+          data-language="en"
+        >
+          🇬🇧 English
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- ORDER -->
+
+    <a
+      class="header-cta"
+      href="https://wa.me/242064486804"
+      target="_blank"
+      rel="noopener"
+      data-i18n="navOrder"
+    >
+      Commander
+    </a>
+
+
+    <!-- MOBILE MENU -->
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+
+<!-- =================================================
+     MOBILE MENU
+================================================= -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+  <a
+    href="index.html#home"
+    data-i18n="navHome"
+  >
+    Accueil
+  </a>
+
+  <a
+    href="index.html#collection"
+    data-i18n="navCollection"
+  >
+    Collection
+  </a>
+
+  <a
+    href="index.html#ritual"
+    data-i18n="navRitual"
+  >
+    Rituel
+  </a>
+
+  <a
+    href="index.html#mothers"
+    data-i18n="navMothers"
+  >
+    Pour les mamans
+  </a>
+
+  <a
+    href="maison.html"
+    data-i18n="navMaison"
+  >
+    La Maison
+  </a>
+
+  <a
+    class="mobile-order"
+    href="https://wa.me/242064486804"
+    target="_blank"
+    rel="noopener"
+    data-i18n="navOrderWhatsapp"
+  >
+    Commander sur WhatsApp
+  </a>
+
+</div>
+
+
+
+<!-- =================================================
+     MAIN
+================================================= -->
+
+<main>
+
+
+
+<!-- =================================================
+     MAISON HERO
+================================================= -->
+
+<section class="page-hero">
+
+
+  <div class="page-hero-copy reveal">
+
+    <p
+      class="eyebrow"
+      data-i18n="maisonEyebrow"
+    >
+      LA MAISON NAYAGLOW
+    </p>
+
+
+    <h1 data-i18n="maisonTitle">
+
+      Une beauté
+      <br>
+
+      <em>
+        qui vous ressemble.
+      </em>
+
+    </h1>
+
+
+    <p data-i18n="maisonIntro">
+
+      NayaGlow est une vision de la beauté née au Congo,
+      inspirée par l'Afrique et pensée pour accompagner
+      les femmes partout dans le monde.
+
+    </p>
+
+
+    <a
+      class="btn btn-dark"
+      href="index.html#collection"
+      data-i18n="maisonButton"
+    >
+      Découvrir la collection
+    </a>
+
+  </div>
+
+
+  <div class="page-hero-art reveal">
+
+    <div class="large-n">
+      N
+    </div>
+
+    <span data-i18n="maisonBadge">
+      CONGO
+      <br>
+      AFRIQUE
+      <br>
+      MONDE
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =================================================
+     PHILOSOPHY
+================================================= -->
+
+<section class="manifesto section-pad">
+
+
+  <div class="section-number">
+    01 /
+  </div>
+
+
+  <div class="manifesto-grid">
+
+
+    <div class="reveal">
+
+      <p
+        class="eyebrow"
+        data-i18n="manifestoEyebrow"
+      >
+        NOTRE PHILOSOPHIE
+      </p>
+
+
+      <h2 data-i18n="manifestoTitle">
+
+        La beauté commence
+        <br>
+
+        <em>
+          quand on revient à soi.
+        </em>
+
+      </h2>
+
+    </div>
+
+
+    <div class="manifesto-copy reveal">
+
+      <p data-i18n="manifestoText1">
+
+        Nous croyons qu'un soin peut être
+        bien plus qu'un produit.
+
+        Il peut devenir un moment de pause,
+        de confiance et de reconnexion à soi.
+
+      </p>
+
+
+      <p data-i18n="manifestoText2">
+
+        NayaGlow crée un univers où la beauté
+        rencontre la nature, le bien-être et
+        le plaisir de prendre soin de soi.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =================================================
+     VALUES
+================================================= -->
+
+<section class="values section-pad">
+
+
+  <div class="section-heading reveal">
+
+    <p
+      class="eyebrow"
+      data-i18n="valuesEyebrow"
+    >
+      NOS VALEURS
+    </p>
+
+
+    <h2 data-i18n="valuesTitle">
+
+      Ce qui guide
+      <br>
+
+      <em>
+        NayaGlow.
+      </em>
+
+    </h2>
+
+  </div>
+
+
+  <div class="values-grid">
+
+
+    <article class="value-card reveal">
+
+      <span>
+        01
+      </span>
+
+      <h3 data-i18n="valueOneTitle">
+        Nature
+      </h3>
+
+      <p data-i18n="valueOneText">
+
+        Nous puisons notre inspiration
+        dans la richesse du monde naturel.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value-card reveal">
+
+      <span>
+        02
+      </span>
+
+      <h3 data-i18n="valueTwoTitle">
+        Douceur
+      </h3>
+
+      <p data-i18n="valueTwoText">
+
+        Des expériences pensées pour
+        apporter confort, simplicité
+        et plaisir.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value-card reveal">
+
+      <span>
+        03
+      </span>
+
+      <h3 data-i18n="valueThreeTitle">
+        Authenticité
+      </h3>
+
+      <p data-i18n="valueThreeText">
+
+        Une beauté qui accompagne chaque
+        femme sans lui demander de devenir
+        quelqu'un d'autre.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value-card reveal">
+
+      <span>
+        04
+      </span>
+
+      <h3 data-i18n="valueFourTitle">
+        Connexion
+      </h3>
+
+      <p data-i18n="valueFourText">
+
+        Une marque née au Congo,
+        enracinée en Afrique et ouverte
+        sur le monde.
+
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =================================================
+     GLOBAL VISION
+================================================= -->
+
+<section class="global section-pad">
+
+
+  <div class="global-panel reveal">
+
+
+    <p
+      class="eyebrow"
+      data-i18n="globalEyebrow"
+    >
+      CONGO • AFRIQUE • MONDE
+    </p>
+
+
+    <h2 data-i18n="globalTitle">
+
+      Née ici.
+      <br>
+
+      <em>
+        Pensée pour partout.
+      </em>
+
+    </h2>
+
+
+    <p data-i18n="globalText">
+
+      NayaGlow porte une identité profondément
+      africaine tout en regardant vers le monde.
+
+      Notre ambition est de créer une expérience
+      beauté capable de voyager, de connecter
+      les cultures et de faire rayonner une
+      nouvelle vision du soin.
+
+    </p>
+
+
+    <div class="global-points">
+
+      <span>
+        CONGO
+      </span>
+
+      <span>
+        AFRICA
+      </span>
+
+      <span>
+        WORLDWIDE
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =================================================
+     CONTACT
+================================================= -->
+
+<section class="contact-section section-pad">
+
+
+  <div class="contact-grid">
+
+
+    <div class="reveal">
+
+      <p
+        class="eyebrow"
+        data-i18n="contactEyebrow"
+      >
+        PARLONS BEAUTÉ
+      </p>
+
+
+      <h2 data-i18n="contactTitle">
+
+        Votre prochain rituel
+        <br>
+
+        <em>
+          commence par un message.
+        </em>
+
+      </h2>
+
+    </div>
+
+
+    <div class="contact-card reveal">
+
+
+      <p data-i18n="contactText">
+
+        Une question sur nos soins,
+        une commande ou simplement envie
+        d'en savoir plus ?
+
+        Notre équipe est à votre écoute.
+
+      </p>
+
+
+      <a
+        class="btn btn-dark"
+        href="https://wa.me/242064486804"
+        target="_blank"
+        rel="noopener"
+        data-i18n="contactWhatsapp"
+      >
+        Écrire sur WhatsApp
+      </a>
+
+
+      <a
+        class="contact-email"
+        href="mailto:ejaldrinemavoungou67@gmail.com"
+      >
+        ejaldrinemavoungou67@gmail.com
+      </a>
+
+
+      <a
+        class="contact-email"
+        href="tel:+242064486804"
+      >
+        +242 06 448 6804
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================= -->
+
+<footer class="footer">
+
+
+  <div class="footer-top">
+
+
+    <div>
+
+      <div class="footer-brand">
+        NayaGlow
+      </div>
+
+      <p data-i18n="footerText">
+        La beauté qui se vit.
+      </p>
+
+    </div>
+
+
+
+    <div>
+
+      <small data-i18n="footerExplore">
+        EXPLORER
+      </small>
+
+
+      <a
+        href="index.html#collection"
+        data-i18n="navCollection"
+      >
+        Collection
+      </a>
+
+
+      <a
+        href="index.html#ritual"
+        data-i18n="navRitual"
+      >
+        Rituel
+      </a>
+
+
+      <a
+        href="maison.html"
+        data-i18n="navMaison"
+      >
+        La Maison
+      </a>
+
+    </div>
+
+
+
+    <div>
+
+      <small data-i18n="footerContact">
+        CONTACT
+      </small>
+
+
+      <a href="tel:+242064486804">
+        +242 06 448 6804
+      </a>
+
+
+      <a href="mailto:ejaldrinemavoungou67@gmail.com">
+        ejaldrinemavoungou67@gmail.com
+      </a>
+
+
+      <a
+        href="https://wa.me/242064486804"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 NayaGlow
+    </span>
+
+
+    <span data-i18n="footerWorld">
+      Congo • Africa • Worldwide
+    </span>
+
+
+    <span data-i18n="footerNote">
+      Beauté • Soin • Bien-être
+    </span>
+
+  </div>
+
+
+</footer>
+
+
+
+<!-- =================================================
+     FLOATING WHATSAPP
+================================================= -->
+
+<a
+  class="whatsapp-float"
+  href="https://wa.me/242064486804"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contacter NayaGlow sur WhatsApp"
+>
+
+  <span>
+    ✆
+  </span>
+
+  <i>
+    WhatsApp
+  </i>
+
+</a>
+
+
+
+<!-- =================================================
+     JAVASCRIPT
+================================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+    </html>
