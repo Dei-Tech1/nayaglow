@@ -3957,3 +3957,26 @@ body::before {
   }
 
       }
+
+/* =========================================================
+   NAYAGLOW — EXPERIENCE BACKGROUND
+========================================================= */
+
+section.experience {
+  background:
+    linear-gradient(
+      rgba(5, 28, 22, 0.35),
+      rgba(5, 28, 22, 0.50)
+    ),
+    url("./IMG_20260915_213750.jpg")
+    center center / cover no-repeat !important;
+
+  background-attachment: fixed !important;
+}
+
+@media (max-width: 700px) {
+  section.experience {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+}
