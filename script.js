@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     document.querySelector(".preloader").classList.add("hide");
-}, 1000);
+}, 500);
 
 });
 
