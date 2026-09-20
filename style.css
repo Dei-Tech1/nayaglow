@@ -3900,3 +3900,60 @@ body::before {
 
 }
 
+ /* =========================================================
+    NAYAGLOW — FORCE FOREST BACKGROUND
+ ========================================================= */
+
+.collection,
+.ritual,
+.botanical,
+.mothers,
+.story,
+.quote {
+  background-image:
+    linear-gradient(
+      rgba(4, 24, 19, 0.68),
+      rgba(4, 24, 19, 0.76)
+    ),
+    url("./Premium_luxury_natural_skincare_website_background_photograp.png") !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Keep the forest behind the content */
+.collection,
+.ritual,
+.botanical,
+.mothers,
+.story,
+.quote {
+  position: relative;
+  isolation: isolate;
+}
+
+.collection > *,
+.ritual > *,
+.botanical > *,
+.mothers > *,
+.story > *,
+.quote > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .collection,
+  .ritual,
+  .botanical,
+  .mothers,
+  .story,
+  .quote {
+    background-attachment: scroll !important;
+  }
+
+      }
