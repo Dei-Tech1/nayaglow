@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const revealElements = document.querySelectorAll(".reveal");
 
 
-  /* =================================================
+/* =================================================
    PRELOADER
 ================================================= */
 
@@ -23,13 +23,12 @@ window.addEventListener("load", () => {
   setTimeout(() => {
 
     if (preloader) {
-      preloader.classList.add("hidden");
+      preloader.classList.add("loaded");
     }
 
-  }, 1000);
+  }, 500);
 
 });
-
 
   /* =================================================
      HEADER
