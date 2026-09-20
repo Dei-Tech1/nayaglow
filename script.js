@@ -150,4 +150,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             en: {
 
-                "
+                " 
+                   Accueil: "Home",
+Collection: "Collection",
+Rituel: "Ritual",
+"Pour les mamans": "For Mothers",
+"La Maison": "The House",
+Commander: "Order",
+"Commander sur WhatsApp": "Order on WhatsApp",
+"Découvrir la collection": "Discover the Collection",
+"Découvrir NayaGlow →": "Discover NayaGlow →"
+
+        },
