@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const revealElements = document.querySelectorAll(".reveal");
 
 
-window.addEventListener("load", () => {
-
   /* =================================================
    PRELOADER
 ================================================= */
