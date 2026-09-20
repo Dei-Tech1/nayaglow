@@ -3980,3 +3980,40 @@ section.experience {
     background-position: center center !important;
   }
 }
+
+/* =========================================================
+   NAYAGLOW — THE NAYAGLOW EXPERIENCE
+   CUSTOM BACKGROUND
+========================================================= */
+
+.intro {
+  position: relative;
+
+  background:
+    linear-gradient(
+      rgba(5, 28, 22, 0.30),
+      rgba(5, 28, 22, 0.48)
+    ),
+    url("./IMG_20260915_213750.jpg")
+    center center / cover no-repeat !important;
+
+  background-attachment: fixed !important;
+
+  overflow: hidden;
+}
+
+/* Keep the text above the image */
+
+.intro > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+
+  .intro {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+
+}
