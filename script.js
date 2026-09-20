@@ -16,17 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", () => {
 
-  setTimeout(() => {
+  /* =================================================
+   PRELOADER
+================================================= */
 
-    const preloader = document.querySelector(".preloader");
+setTimeout(() => {
+  const preloader = document.getElementById("preloader");
 
-    if (preloader) {
-      preloader.classList.add("hide");
-    }
-
-  }, 500);
-
-});
+  if (preloader) {
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+    preloader.style.pointerEvents = "none";
+  }
+}, 500);
    
   /* =================================================
      HEADER
