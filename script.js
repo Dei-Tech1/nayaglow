@@ -151,14 +151,53 @@ document.addEventListener("DOMContentLoaded", () => {
             en: {
 
                 " 
-                   Accueil: "Home",
-Collection: "Collection",
-Rituel: "Ritual",
+                   "Accueil": "Home",
+"Collection": "Collection",
+"Rituel": "Ritual",
 "Pour les mamans": "For Mothers",
 "La Maison": "The House",
-Commander: "Order",
+"Commander": "Order",
 "Commander sur WhatsApp": "Order on WhatsApp",
 "Découvrir la collection": "Discover the Collection",
 "Découvrir NayaGlow →": "Discover NayaGlow →"
 
         },
+
+        fr: {
+
+"Home": "Accueil",
+"Collection": "Collection",
+"Ritual": "Rituel",
+"For Mothers": "Pour les mamans",
+"The House": "La Maison",
+"Order": "Commander",
+"Order on WhatsApp": "Commander sur WhatsApp",
+"Discover the Collection": "Découvrir la collection",
+"Discover NayaGlow →": "Découvrir NayaGlow →"
+
+        }
+
+    };
+
+    const currentTranslations =
+        translations[language];
+
+    if (!currentTranslations) return;
+
+    document.querySelectorAll(
+        "a, button, p, span, h1, h2, h3, small"
+    ).forEach(element => {
+
+        const text =
+            element.textContent.trim();
+
+        if (currentTranslations[text]) {
+
+            element.textContent =
+                currentTranslations[text];
+
+        }
+
+    });
+
+}
