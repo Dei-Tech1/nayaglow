@@ -21,12 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
 
   setTimeout(() => {
-
-    if (preloader) {
-      preloader.classList.add("loaded");
-    }
-
-  }, 500);
+    document.querySelector(".preloader").classList.add("hide");
+}, 2500);
 
 });
 
