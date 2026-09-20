@@ -96,6 +96,12 @@ button {
     visibility .8s ease;
 }
 
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .preloader-logo {
   width: 70px;
   height: 70px;
