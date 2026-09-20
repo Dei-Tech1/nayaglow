@@ -4,21 +4,15 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =================================================
-     ELEMENTS
-  ================================================= */
-
   const preloader = document.getElementById("preloader");
   const siteHeader = document.getElementById("siteHeader");
-
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
-
   const languageToggle = document.getElementById("languageToggle");
   const languageMenu = document.getElementById("languageMenu");
   const languageLabel = document.getElementById("languageLabel");
-
   const revealElements = document.querySelectorAll(".reveal");
+
 
   /* =================================================
      PRELOADER
@@ -38,18 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =================================================
-     HEADER — SCROLL EFFECT
+     HEADER
   ================================================= */
 
   function updateHeader() {
 
     if (!siteHeader) return;
 
-    if (window.scrollY > 40) {
-      siteHeader.classList.add("scrolled");
-    } else {
-      siteHeader.classList.remove("scrolled");
-    }
+    siteHeader.classList.toggle(
+      "scrolled",
+      window.scrollY > 40
+    );
 
   }
 
@@ -66,38 +59,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuToggle.addEventListener("click", () => {
 
-      const isOpen = mobileMenu.classList.toggle("active");
+      const open =
+        mobileMenu.classList.toggle("active");
 
-      menuToggle.classList.toggle("active", isOpen);
+      menuToggle.classList.toggle(
+        "active",
+        open
+      );
 
       menuToggle.setAttribute(
         "aria-expanded",
-        isOpen ? "true" : "false"
+        open ? "true" : "false"
       );
 
     });
 
 
-    /* Close menu when a link is clicked */
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(link => {
 
-    const mobileLinks = mobileMenu.querySelectorAll("a");
+        link.addEventListener("click", () => {
 
-    mobileLinks.forEach(link => {
+          mobileMenu.classList.remove("active");
 
-      link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
 
-        mobileMenu.classList.remove("active");
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
-        menuToggle.classList.remove("active");
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+        });
 
       });
-
-    });
 
   }
 
@@ -108,24 +103,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (languageToggle && languageMenu) {
 
-    languageToggle.addEventListener("click", (event) => {
+    languageToggle.addEventListener(
+      "click",
+      event => {
 
-      event.stopPropagation();
+        event.stopPropagation();
 
-      const isOpen =
-        languageMenu.classList.toggle("active");
+        const open =
+          languageMenu.classList.toggle("active");
 
-      languageToggle.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
+        languageToggle.setAttribute(
+          "aria-expanded",
+          open ? "true" : "false"
+        );
 
-    });
+      }
+    );
 
 
-    /* Close language menu when clicking elsewhere */
-
-    document.addEventListener("click", (event) => {
+    document.addEventListener("click", event => {
 
       if (
         !languageMenu.contains(event.target) &&
@@ -152,6 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const translations = {
 
+    /* =================================================
+       FRENCH
+    ================================================= */
+
     fr: {
 
       navHome: "Accueil",
@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navRitual: "Rituel",
       navMothers: "Pour les mamans",
       navStory: "Notre histoire",
+      navMaison: "La Maison",
       navOrder: "Commander",
       navOrderWhatsapp: "Commander sur WhatsApp",
 
@@ -262,10 +263,104 @@ document.addEventListener("DOMContentLoaded", () => {
         "La beauté naturelle, pensée pour vous accompagner partout.",
 
       footerNote:
-        "Née au Congo • Enracinée en Afrique • Pensée pour le monde."
+        "Née au Congo • Enracinée en Afrique • Pensée pour le monde.",
+
+
+      /* LA MAISON */
+
+      maisonEyebrow:
+        "LA MAISON NAYAGLOW",
+
+      maisonTitle:
+        'Une beauté <br><em>qui vous ressemble.</em>',
+
+      maisonIntro:
+        "NayaGlow est une vision de la beauté née au Congo, inspirée par l'Afrique et pensée pour accompagner les femmes partout dans le monde.",
+
+      maisonButton:
+        "Découvrir la collection",
+
+      maisonBadge:
+        "CONGO<br>AFRIQUE<br>MONDE",
+
+      manifestoEyebrow:
+        "NOTRE PHILOSOPHIE",
+
+      manifestoTitle:
+        'La beauté commence<br><em>quand on revient à soi.</em>',
+
+      manifestoText1:
+        "Nous croyons qu'un soin peut être bien plus qu'un produit. Il peut devenir un moment de pause, de confiance et de reconnexion à soi.",
+
+      manifestoText2:
+        "NayaGlow crée un univers où la beauté rencontre la nature, le bien-être et le plaisir de prendre soin de soi.",
+
+      valuesEyebrow:
+        "NOS VALEURS",
+
+      valuesTitle:
+        'Ce qui guide<br><em>NayaGlow.</em>',
+
+      valueOneTitle:
+        "Nature",
+
+      valueOneText:
+        "Nous puisons notre inspiration dans la richesse du monde naturel.",
+
+      valueTwoTitle:
+        "Douceur",
+
+      valueTwoText:
+        "Des expériences pensées pour apporter confort, simplicité et plaisir.",
+
+      valueThreeTitle:
+        "Authenticité",
+
+      valueThreeText:
+        "Une beauté qui accompagne chaque femme sans lui demander de devenir quelqu'un d'autre.",
+
+      valueFourTitle:
+        "Connexion",
+
+      valueFourText:
+        "Une marque née au Congo, enracinée en Afrique et ouverte sur le monde.",
+
+      globalEyebrow:
+        "CONGO • AFRIQUE • MONDE",
+
+      globalTitle:
+        'Née ici.<br><em>Pensée pour partout.</em>',
+
+      globalText:
+        "NayaGlow porte une identité profondément africaine tout en regardant vers le monde. Notre ambition est de créer une expérience beauté capable de voyager, de connecter les cultures et de faire rayonner une nouvelle vision du soin.",
+
+      contactEyebrow:
+        "PARLONS BEAUTÉ",
+
+      contactTitle:
+        'Votre prochain rituel<br><em>commence par un message.</em>',
+
+      contactText:
+        "Une question sur nos soins, une commande ou simplement envie d'en savoir plus ? Notre équipe est à votre écoute.",
+
+      contactWhatsapp:
+        "Écrire sur WhatsApp",
+
+      footerExplore:
+        "EXPLORER",
+
+      footerContact:
+        "CONTACT",
+
+      footerWorld:
+        "Congo • Africa • Worldwide"
 
     },
 
+
+    /* =================================================
+       ENGLISH
+    ================================================= */
 
     en: {
 
@@ -274,6 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navRitual: "Ritual",
       navMothers: "For Mothers",
       navStory: "Our Story",
+      navMaison: "Our House",
       navOrder: "Order",
       navOrderWhatsapp: "Order on WhatsApp",
 
@@ -377,7 +473,97 @@ document.addEventListener("DOMContentLoaded", () => {
         "Natural beauty, designed to accompany you wherever you go.",
 
       footerNote:
-        "Born in Congo • Rooted in Africa • Made for the world."
+        "Born in Congo • Rooted in Africa • Made for the world.",
+
+
+      /* OUR HOUSE */
+
+      maisonEyebrow:
+        "THE NAYAGLOW HOUSE",
+
+      maisonTitle:
+        'Beauty <br><em>that feels like you.</em>',
+
+      maisonIntro:
+        "NayaGlow is a beauty vision born in Congo, inspired by Africa and created to accompany women everywhere in the world.",
+
+      maisonButton:
+        "Discover the collection",
+
+      maisonBadge:
+        "CONGO<br>AFRICA<br>WORLD",
+
+      manifestoEyebrow:
+        "OUR PHILOSOPHY",
+
+      manifestoTitle:
+        'Beauty begins<br><em>when we return to ourselves.</em>',
+
+      manifestoText1:
+        "We believe beauty care can be much more than a product. It can become a moment of pause, confidence and reconnection with yourself.",
+
+      manifestoText2:
+        "NayaGlow creates a world where beauty meets nature, well-being and the pleasure of taking care of yourself.",
+
+      valuesEyebrow:
+        "OUR VALUES",
+
+      valuesTitle:
+        'What guides<br><em>NayaGlow.</em>',
+
+      valueOneTitle:
+        "Nature",
+
+      valueOneText:
+        "We draw our inspiration from the richness and beauty of the natural world.",
+
+      valueTwoTitle:
+        "Softness",
+
+      valueTwoText:
+        "Experiences designed to bring comfort, simplicity and pleasure.",
+
+      valueThreeTitle:
+        "Authenticity",
+
+      valueThreeText:
+        "Beauty that supports every woman without asking her to become someone else.",
+
+      valueFourTitle:
+        "Connection",
+
+      valueFourText:
+        "A brand born in Congo, rooted in Africa and open to the world.",
+
+      globalEyebrow:
+        "CONGO • AFRICA • WORLD",
+
+      globalTitle:
+        'Born here.<br><em>Made for everywhere.</em>',
+
+      globalText:
+        "NayaGlow carries a deeply African identity while looking toward the world. Our ambition is to create a beauty experience that travels, connects cultures and brings a new vision of self-care to more women.",
+
+      contactEyebrow:
+        "LET'S TALK BEAUTY",
+
+      contactTitle:
+        'Your next ritual<br><em>starts with a message.</em>',
+
+      contactText:
+        "A question about our products, an order or simply want to know more? Our team is here for you.",
+
+      contactWhatsapp:
+        "Message us on WhatsApp",
+
+      footerExplore:
+        "EXPLORE",
+
+      footerContact:
+        "CONTACT",
+
+      footerWorld:
+        "Congo • Africa • Worldwide"
 
     }
 
@@ -392,32 +578,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!translations[language]) return;
 
-    const selectedLanguage = translations[language];
+    const selected =
+      translations[language];
 
-    /* Update translated elements */
 
     document
       .querySelectorAll("[data-i18n]")
       .forEach(element => {
 
-        const key = element.getAttribute("data-i18n");
+        const key =
+          element.getAttribute("data-i18n");
 
-        if (selectedLanguage[key]) {
+        if (
+          selected[key] !== undefined
+        ) {
 
           element.innerHTML =
-            selectedLanguage[key];
+            selected[key];
 
         }
 
       });
 
 
-    /* Update HTML language */
+    document.documentElement.lang =
+      language;
 
-    document.documentElement.lang = language;
-
-
-    /* Update language button */
 
     if (languageLabel) {
 
@@ -427,13 +613,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* Close language menu */
-
     if (languageMenu) {
 
       languageMenu.classList.remove("active");
 
     }
+
 
     if (languageToggle) {
 
@@ -444,8 +629,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    /* Save language */
 
     localStorage.setItem(
       "nayaGlowLanguage",
@@ -459,53 +642,52 @@ document.addEventListener("DOMContentLoaded", () => {
      LANGUAGE BUTTONS
   ================================================= */
 
-  const languageButtons =
-    document.querySelectorAll(
+  document
+    .querySelectorAll(
       ".language-menu button[data-language]"
-    );
+    )
+    .forEach(button => {
 
+      button.addEventListener(
+        "click",
+        () => {
 
-  languageButtons.forEach(button => {
+          changeLanguage(
+            button.getAttribute(
+              "data-language"
+            )
+          );
 
-    button.addEventListener("click", () => {
-
-      const language =
-        button.getAttribute("data-language");
-
-      changeLanguage(language);
+        }
+      );
 
     });
 
-  });
-
 
   /* =================================================
-     LOAD SAVED LANGUAGE
+     LOAD LANGUAGE
   ================================================= */
 
   const savedLanguage =
-    localStorage.getItem("nayaGlowLanguage");
+    localStorage.getItem(
+      "nayaGlowLanguage"
+    );
 
 
-  if (
-    savedLanguage &&
+  changeLanguage(
     translations[savedLanguage]
-  ) {
-
-    changeLanguage(savedLanguage);
-
-  } else {
-
-    changeLanguage("fr");
-
-  }
+      ? savedLanguage
+      : "fr"
+  );
 
 
   /* =================================================
      SCROLL REVEAL
   ================================================= */
 
-  if ("IntersectionObserver" in window) {
+  if (
+    "IntersectionObserver" in window
+  ) {
 
     const observer =
       new IntersectionObserver(
@@ -513,9 +695,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
           entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+            if (
+              entry.isIntersecting
+            ) {
 
-              entry.target.classList.add("visible");
+              entry.target.classList.add(
+                "visible"
+              );
 
               observerInstance.unobserve(
                 entry.target
@@ -528,7 +714,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           threshold: 0.12,
-          rootMargin: "0px 0px -40px 0px"
+          rootMargin:
+            "0px 0px -40px 0px"
         }
       );
 
@@ -555,117 +742,105 @@ document.addEventListener("DOMContentLoaded", () => {
   ================================================= */
 
   document
-    .querySelectorAll('a[href^="#"]')
+    .querySelectorAll(
+      'a[href^="#"]'
+    )
     .forEach(link => {
 
-      link.addEventListener("click", event => {
+      link.addEventListener(
+        "click",
+        event => {
 
-        const targetId =
-          link.getAttribute("href");
+          const targetId =
+            link.getAttribute("href");
 
-        if (
-          !targetId ||
-          targetId === "#"
-        ) return;
+          if (
+            !targetId ||
+            targetId === "#"
+          ) return;
 
-        const target =
-          document.querySelector(targetId);
+          const target =
+            document.querySelector(
+              targetId
+            );
 
-        if (!target) return;
+          if (!target) return;
 
-        event.preventDefault();
+          event.preventDefault();
 
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
 
-      });
+        }
+      );
 
     });
 
 
   /* =================================================
-     ESC KEY — CLOSE MENUS
+     ESCAPE KEY
   ================================================= */
 
-  document.addEventListener("keydown", event => {
+  document.addEventListener(
+    "keydown",
+    event => {
 
-    if (event.key !== "Escape") return;
-
-
-    if (languageMenu) {
-
-      languageMenu.classList.remove("active");
-
-    }
-
-    if (languageToggle) {
-
-      languageToggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-    }
+      if (event.key !== "Escape") return;
 
 
-    if (mobileMenu) {
+      if (languageMenu) {
 
-      mobileMenu.classList.remove("active");
-
-    }
-
-    if (menuToggle) {
-
-      menuToggle.classList.remove("active");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-    }
-
-  });
-
-
-  /* =================================================
-     WHATSAPP — SMALL INTERACTION
-  ================================================= */
-
-  const whatsappButton =
-    document.querySelector(".whatsapp-float");
-
-
-  if (whatsappButton) {
-
-    whatsappButton.addEventListener(
-      "mouseenter",
-      () => {
-
-        whatsappButton.classList.add("hovered");
+        languageMenu.classList.remove(
+          "active"
+        );
 
       }
-    );
 
 
-    whatsappButton.addEventListener(
-      "mouseleave",
-      () => {
+      if (languageToggle) {
 
-        whatsappButton.classList.remove("hovered");
+        languageToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
 
       }
-    );
 
-  }
+
+      if (mobileMenu) {
+
+        mobileMenu.classList.remove(
+          "active"
+        );
+
+      }
+
+
+      if (menuToggle) {
+
+        menuToggle.classList.remove(
+          "active"
+        );
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+  );
 
 
   /* =================================================
      FINAL INITIALIZATION
   ================================================= */
 
-  document.body.classList.add("naya-ready");
+  document.body.classList.add(
+    "naya-ready"
+  );
 
 });
