@@ -251,3 +251,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 
 });
+
+                          /* =================================================
+   SCROLL REVEAL
+   ================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".product-card, .ingredient-item, .ritual-step, .mothers-content"
+    );
+
+if ("IntersectionObserver" in window) {
+
+    const observer =
+        new IntersectionObserver(
+            (entries, observerInstance) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        observerInstance.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+} else {
+
+    revealElements.forEach(element => {
+        element.classList.add("visible");
+    });
+
+}
