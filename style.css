@@ -1,28 +1,28 @@
-/* =========================================================
-   NAYAGLOW 2.0
-   CINEMATIC BEAUTY • AFRICAN ROOTS • MODERN LUXURY
-========================================================= */
-
 :root {
-  --forest: #14231d;
-  --forest-deep: #0b1511;
-  --forest-soft: #1c3028;
+  /* 🌿 FOREST + WATER PALETTE */
+  --forest: #12382f;
+  --forest-deep: #071d18;
+  --forest-soft: #1d5145;
 
-  --cream: #f4eee4;
-  --cream-light: #faf7f1;
-  --sand: #ded2c0;
+  --water: #2f766d;
+  --water-soft: #79aaa0;
+  --mist: #dcebe5;
+
+  --cream: #eef4ed;
+  --cream-light: #f7faf6;
+  --sand: #cbd8cf;
 
   --gold: #c8a56a;
   --gold-light: #e1c995;
 
-  --text-dark: #17221d;
-  --text-light: #f8f4ed;
-  --text-muted: #9b9d94;
+  --text-dark: #10251f;
+  --text-light: #f5faf7;
+  --text-muted: #9fb4ad;
 
-  --line-dark: rgba(255,255,255,.12);
-  --line-light: rgba(20,35,29,.12);
+  --line-dark: rgba(255,255,255,.14);
+  --line-light: rgba(18,56,47,.14);
 
-  --shadow: 0 25px 70px rgba(0,0,0,.18);
+  --shadow: 0 25px 70px rgba(4,28,22,.25);
 
   --radius-lg: 28px;
   --radius-md: 18px;
