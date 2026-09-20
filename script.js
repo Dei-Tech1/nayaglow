@@ -341,3 +341,61 @@ if (menuToggle && mobileMenu) {
     });
 
 }
+
+                          /* =================================================
+   LANGUAGE MENU
+   ================================================= */
+
+const languageToggle =
+    document.getElementById("languageToggle");
+
+const languageMenu =
+    document.getElementById("languageMenu");
+
+const languageLabel =
+    document.getElementById("languageLabel");
+
+if (languageToggle && languageMenu) {
+
+    languageToggle.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        languageMenu.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(
+        "[data-language]"
+    ).forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const language =
+                button.getAttribute("data-language");
+
+            changeLanguage(language);
+
+            if (languageLabel) {
+
+                languageLabel.textContent =
+                    language.toUpperCase();
+
+            }
+
+            languageMenu.classList.remove("active");
+
+        });
+
+    });
+
+
+    document.addEventListener("click", () => {
+
+        languageMenu.classList.remove("active");
+
+    });
+
+}
+   
