@@ -195,12 +195,27 @@ button {
 }
 
 .brand img {
-  width: 58px;
-  height: 58px;
+  width: 76px;
+  height: 76px;
 
   object-fit: contain;
-
   border-radius: 50%;
+
+  transform-style: preserve-3d;
+  animation: logoFloat 4s ease-in-out infinite;
+
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotateY(8deg);
+  }
 }
 
 .brand span {
