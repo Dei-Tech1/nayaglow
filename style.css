@@ -3664,7 +3664,8 @@ body::before {
 @media (max-width: 700px) {
 
   .hero-photo-wrap {
-    width: min(78vw, 360px);
+    width: min(62vw, 270px);
+    aspect-ratio: 4 / 5;
   }
 
   .hero-photo {
