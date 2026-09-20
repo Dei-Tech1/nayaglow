@@ -3390,3 +3390,61 @@ blockquote {
   }
 
      }
+
+/* =========================================================
+   NAYAGLOW — FOREST + WATER ATMOSPHERE
+========================================================= */
+
+body {
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(47, 118, 109, .18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(121, 170, 160, .14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #071d18 0%,
+      #12382f 42%,
+      #1d5145 72%,
+      #0b2922 100%
+    );
+
+  background-attachment: fixed;
+}
+
+/* Soft water-like glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(121, 170, 160, .16),
+      transparent 45%
+    );
+
+  animation: waterAtmosphere 9s ease-in-out infinite alternate;
+}
+
+@keyframes waterAtmosphere {
+  from {
+    transform: scale(1);
+    opacity: .65;
+  }
+
+  to {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
