@@ -298,3 +298,46 @@ if ("IntersectionObserver" in window) {
     });
 
 }
+
+                        
+   /* =================================================
+   MOBILE MENU
+   ================================================= */
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+if (menuToggle && mobileMenu) {
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen =
+            mobileMenu.classList.toggle("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    });
+
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+}
