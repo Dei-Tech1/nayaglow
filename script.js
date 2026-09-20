@@ -398,4 +398,9 @@ if (languageToggle && languageMenu) {
     });
 
 }
-   
+
+   /* =================================================
+   NAYAGLOW SCRIPT COMPLETE
+   ================================================= */
+
+console.log("NayaGlow website loaded successfully.");
