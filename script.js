@@ -15,20 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =================================================
-     PRELOADER
-  ================================================= */
+   PRELOADER
+================================================= */
 
-  window.addEventListener("load", () => {
+window.addEventListener("load", () => {
 
-    setTimeout(() => {
+  setTimeout(() => {
 
-      if (preloader) {
-        preloader.classList.add("loaded");
-      }
+    if (preloader) {
+      preloader.classList.add("hidden");
+    }
 
-    }, 500);
+  }, 1000);
 
-  });
+});
 
 
   /* =================================================
