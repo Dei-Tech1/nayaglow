@@ -149,8 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const translations = {
 
             en: {
-
-                " 
+   
                    "Accueil": "Home",
 "Collection": "Collection",
 "Rituel": "Ritual",
