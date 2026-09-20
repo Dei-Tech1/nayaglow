@@ -559,7 +559,15 @@ button {
 
   padding: 120px 6% 70px;
 
-  background: var(--forest);
+  background:
+    linear-gradient(
+      135deg,
+      #061a15 0%,
+      #0d3027 42%,
+      #165044 72%,
+      #09231d 100%
+    );
+
   color: var(--cream);
 
   overflow: hidden;
@@ -570,9 +578,31 @@ button {
   inset: 0;
 
   background:
-    radial-gradient(circle at 75% 35%, rgba(200,165,106,.15), transparent 28%),
-    radial-gradient(circle at 15% 75%, rgba(64,104,84,.2), transparent 32%),
-    linear-gradient(135deg, #102019, #172b22 55%, #0d1914);
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(121,170,160,.25),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 15% 75%,
+      rgba(47,118,109,.32),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      circle at 55% 90%,
+      rgba(92,151,137,.18),
+      transparent 38%
+    ),
+
+    linear-gradient(
+      145deg,
+      #061a15,
+      #12382f 45%,
+      #1d5145 72%,
+      #071d18
+    );
 
   z-index: 0;
 }
