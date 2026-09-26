@@ -1758,6 +1758,24 @@ button {
 
   overflow: hidden;
 }
+.story-background {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(4, 18, 14, .25),
+      rgba(4, 18, 14, .65)
+    ),
+    url("wide_cinematic_high_end_product_beauty_scene_wit.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
 
 .story-number {
   position: absolute;
