@@ -1177,42 +1177,70 @@ button {
 .product-image {
   position: relative;
 
-  min-height: 330px;
+  min-height: 350px;
 
   display: grid;
   place-items: center;
 
   overflow: hidden;
+
+  isolation: isolate;
 }
 
 .product-card-one .product-image {
   background:
-    radial-gradient(circle, rgba(205,175,124,.3), transparent 50%),
-    #ddd0bc;
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,255,255,.65),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #e4d8c5,
+      #cfc0aa
+    );
 }
 
 .product-card-two .product-image {
   background:
-    radial-gradient(circle, rgba(94,126,105,.25), transparent 50%),
-    #d5d5c5;
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,255,255,.55),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #dce2dc,
+      #bdc8c0
+    );
 }
 
 .product-card-three .product-image {
   background:
-    radial-gradient(circle, rgba(186,139,94,.25), transparent 50%),
-    #d8c9ba;
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,255,255,.55),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #dfd1c2,
+      #c8b6a5
+    );
 }
 
 .product-number {
   position: absolute;
 
-  top: 18px;
-  left: 20px;
+  top: 20px;
+  left: 22px;
 
   font-size: 9px;
   letter-spacing: .18em;
 
   color: rgba(20,35,29,.55);
+
+  z-index: 4;
 }
 
 .floating-product {
