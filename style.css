@@ -2931,7 +2931,23 @@ blockquote {
 
 .values {
 
-  background: var(--cream);
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(200,165,106,.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(47,118,109,.16),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #071d18 0%,
+      #102c24 48%,
+      #173f35 100%
+    );
 
 }
 
