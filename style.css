@@ -2674,12 +2674,15 @@ blockquote {
 
 .page-hero-copy h1 em {
 
-  color: var(--gold);
+  color: var(--gold-light);
 
   font-style: normal;
 
-}
+  text-shadow:
+    0 8px 30px
+    rgba(200,165,106,.16);
 
+}
 
 .page-hero-copy > p:last-of-type {
 
