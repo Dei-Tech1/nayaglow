@@ -2593,12 +2593,13 @@ blockquote {
       rgba(47,118,109,.18),
       transparent 34%
     ),
-    linear-gradient(
-      135deg,
-      #071d18 0%,
-      #0d2921 45%,
-      #12382f 100%
-    );
+   linear-gradient(
+    135deg,
+    rgba(7,29,24,.82),
+    rgba(18,56,47,.68)
+  ),
+  url("IMG-20260920-WA0002.jpg")
+  center center / cover no-repeat;
 
 }
 
