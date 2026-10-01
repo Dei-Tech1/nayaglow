@@ -2663,6 +2663,12 @@ blockquote {
 
   letter-spacing: -.055em;
 
+  color: var(--cream);
+
+  text-shadow:
+    0 12px 40px
+    rgba(0,0,0,.18);
+
 }
 
 
