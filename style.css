@@ -2692,9 +2692,13 @@ blockquote {
 
   line-height: 1.8;
 
-  opacity: .72;
+  color: var(--mist);
+
+  opacity: .82;
 
   margin-bottom: 35px;
+
+  letter-spacing: .01em;
 
 }
 
