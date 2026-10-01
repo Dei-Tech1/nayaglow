@@ -2871,8 +2871,11 @@ blockquote {
 
   font-style: normal;
 
-}
+  text-shadow:
+    0 8px 28px
+    rgba(200,165,106,.14);
 
+}
 
 .manifesto-copy {
 
