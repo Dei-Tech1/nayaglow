@@ -1261,6 +1261,8 @@ button {
 }
 
 .jar {
+  position: relative;
+
   width: 125px;
   height: 115px;
 
@@ -1271,18 +1273,36 @@ button {
 
   border-radius: 20px 20px 28px 28px;
 
-  background: linear-gradient(
-    135deg,
-    #d9c39a,
-    #f1dfb5,
-    #ad8954
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #b89560 0%,
+      #ead6aa 35%,
+      #f5e6c2 55%,
+      #aa824d 100%
+    );
 
   color: var(--forest-deep);
 
   box-shadow:
-    0 25px 40px rgba(0,0,0,.18),
-    inset -8px -4px 15px rgba(0,0,0,.08);
+    0 30px 45px rgba(20,35,29,.20),
+    inset 7px 4px 12px rgba(255,255,255,.28),
+    inset -9px -7px 16px rgba(0,0,0,.10);
+
+  transform: perspective(500px) rotateY(-3deg);
+
+  transition:
+    transform .5s ease,
+    box-shadow .5s ease;
+}
+
+.jar:hover {
+  transform: perspective(500px) rotateY(3deg) translateY(-5px);
+
+  box-shadow:
+    0 35px 55px rgba(20,35,29,.24),
+    inset 7px 4px 12px rgba(255,255,255,.32),
+    inset -9px -7px 16px rgba(0,0,0,.10);
 }
 
 .jar::before {
@@ -1297,7 +1317,16 @@ button {
 
   border-radius: 10px;
 
-  background: #a58450;
+  background:
+    linear-gradient(
+      180deg,
+      #d1b277,
+      #8f6d3e
+    );
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,.25),
+    0 3px 6px rgba(0,0,0,.12);
 }
 
 .jar small {
@@ -1308,6 +1337,7 @@ button {
 .jar strong {
   font-family: "Manrope", sans-serif;
   font-size: 21px;
+  letter-spacing: .04em;
 }
 
 .jar span {
