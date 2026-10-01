@@ -1395,13 +1395,51 @@ button {
 }
 
 .product-details a {
+  position: relative;
+
   display: inline-flex;
   align-items: center;
 
   margin-top: 20px;
 
+  color: var(--forest-deep);
+
   font-size: 11px;
   font-weight: 700;
+  letter-spacing: .04em;
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+.product-details a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -6px;
+
+  height: 1px;
+
+  background: var(--gold);
+
+  transform: scaleX(.35);
+  transform-origin: left;
+
+  transition: transform .35s ease;
+}
+
+.product-details a:hover {
+  color: var(--gold);
+
+  transform: translateX(3px);
+}
+
+.product-details a:hover::after {
+  transform: scaleX(1);
 }
 
 .product-details a span {
