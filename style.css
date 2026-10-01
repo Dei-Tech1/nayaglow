@@ -3124,10 +3124,11 @@ blockquote {
 
   line-height: 1.7;
 
-  opacity: .68;
+  color: var(--mist);
+
+  opacity: .88;
 
 }
-
 
 /* =================================================
    GLOBAL VISION
