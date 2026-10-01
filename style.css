@@ -2892,7 +2892,11 @@ blockquote {
 
   line-height: 1.9;
 
-  opacity: .72;
+  color: var(--mist);
+
+  opacity: .78;
+
+  letter-spacing: .01em;
 
 }
 
