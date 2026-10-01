@@ -2962,28 +2962,25 @@ blockquote {
 
 
 .section-heading h2 {
+.values .section-heading h2 {
 
-  margin-top: 18px;
+  color: var(--cream);
 
-  font-family:
-    "Manrope",
-    sans-serif;
-
-  font-size:
-    clamp(40px, 6vw, 72px);
-
-  line-height: 1;
-
-  letter-spacing: -.05em;
+  text-shadow:
+    0 12px 35px
+    rgba(0,0,0,.18);
 
 }
 
+.values .section-heading h2 em {
 
-.section-heading h2 em {
-
-  color: var(--gold);
+  color: var(--gold-light);
 
   font-style: normal;
+
+  text-shadow:
+    0 8px 28px
+    rgba(200,165,106,.14);
 
 }
 
