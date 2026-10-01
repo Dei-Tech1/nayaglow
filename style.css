@@ -2812,16 +2812,18 @@ blockquote {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(200,165,106,.08),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      var(--forest-deep),
-      var(--forest)
-    );
+  radial-gradient(
+    circle at 85% 20%,
+    rgba(200,165,106,.10),
+    transparent 30%
+  ),
+  linear-gradient(
+    135deg,
+    rgba(7,29,24,.90),
+    rgba(18,56,47,.82)
+  ),
+  url("IMG-20260920-WA0002.jpg")
+  center center / cover no-repeat;
 
   color: var(--cream);
 
