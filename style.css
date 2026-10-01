@@ -2559,7 +2559,7 @@ blockquote {
 
 
 /* =================================================
-   PAGE HERO
+   PAGE HERO — PREMIUM MAISON
 ================================================= */
 
 .page-hero {
@@ -2580,13 +2580,25 @@ blockquote {
 
   overflow: hidden;
 
+  color: var(--cream);
+
   background:
     radial-gradient(
-      circle at 80% 30%,
-      rgba(200,165,106,.12),
-      transparent 35%
+      circle at 82% 28%,
+      rgba(200,165,106,.16),
+      transparent 30%
     ),
-    var(--cream);
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(47,118,109,.18),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #071d18 0%,
+      #0d2921 45%,
+      #12382f 100%
+    );
 
 }
 
