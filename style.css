@@ -2911,11 +2911,13 @@ blockquote {
 
   font-size: 10px;
 
+  font-weight: 600;
+
   letter-spacing: .25em;
 
   color: var(--gold-light);
 
-  opacity: .6;
+  opacity: .7;
 
 }
 
