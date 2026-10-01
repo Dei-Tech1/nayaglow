@@ -4214,3 +4214,15 @@ section.experience {
   }
 
 }
+
+/* =================================================
+   LA MAISON — GLOBAL BACKGROUND
+================================================= */
+
+body:has(.page-hero) {
+
+  background:
+    url("IMG-20260920-WA0002.jpg")
+    center center / cover fixed no-repeat;
+
+}
