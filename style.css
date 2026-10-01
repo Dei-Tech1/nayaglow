@@ -2609,22 +2609,33 @@ blockquote {
 
   position: absolute;
 
-  width: 420px;
-  height: 420px;
+  width: 520px;
+  height: 520px;
 
   border-radius: 50%;
 
   border: 1px solid
-    rgba(200,165,106,.18);
+    rgba(200,165,106,.12);
 
-  right: -120px;
-  top: 100px;
+  right: -170px;
+
+  top: 40px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(200,165,106,.07),
+      transparent 68%
+    );
+
+  box-shadow:
+    0 0 120px
+    rgba(47,118,109,.10);
 
   animation:
     maisonFloat 8s ease-in-out infinite;
 
 }
-
 
 .page-hero-copy {
 
