@@ -2808,7 +2808,19 @@ blockquote {
 
   position: relative;
 
-  background: var(--forest);
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(200,165,106,.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      var(--forest-deep),
+      var(--forest)
+    );
 
   color: var(--cream);
 
