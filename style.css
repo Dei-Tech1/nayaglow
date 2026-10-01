@@ -2691,6 +2691,9 @@ blockquote {
 
 }
 
+/* =================================================
+   MAISON HERO — N EMBLEM
+================================================= */
 
 .large-n {
 
@@ -2706,7 +2709,7 @@ blockquote {
   border: 1px solid
     rgba(200,165,106,.55);
 
-  color: var(--gold);
+  color: var(--gold-light);
 
   font-family:
     "Manrope",
@@ -2720,20 +2723,24 @@ blockquote {
 
   background:
     radial-gradient(
-      circle,
-      rgba(200,165,106,.12),
-      rgba(23,56,44,.04)
+      circle at 35% 30%,
+      rgba(200,165,106,.18),
+      rgba(47,118,109,.10) 45%,
+      rgba(7,29,24,.18) 75%
     );
 
   box-shadow:
     0 30px 100px
-    rgba(23,56,44,.12);
+      rgba(0,0,0,.28),
+    inset 0 0 60px
+      rgba(200,165,106,.05);
+
+  backdrop-filter: blur(8px);
 
   animation:
     maisonFloat 7s ease-in-out infinite;
 
 }
-
 
 .page-hero-art span {
 
