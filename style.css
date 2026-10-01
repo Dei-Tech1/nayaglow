@@ -3086,9 +3086,13 @@ blockquote {
 
   font-size: 10px;
 
-  letter-spacing: .2em;
+  font-weight: 600;
 
-  color: var(--gold);
+  letter-spacing: .24em;
+
+  color: var(--gold-light);
+
+  opacity: .85;
 
 }
 
@@ -3101,9 +3105,13 @@ blockquote {
     "Manrope",
     sans-serif;
 
-  font-size: 25px;
+  font-size: 28px;
 
-  letter-spacing: -.03em;
+  font-weight: 600;
+
+  letter-spacing: -.035em;
+
+  color: var(--cream);
 
 }
 
