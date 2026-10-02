@@ -3130,10 +3130,29 @@ blockquote {
 
 .global {
 
+  position: relative;
+
   background:
-    var(--forest);
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(200,165,106,.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(47,118,109,.18),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #061a15 0%,
+      #0f3028 50%,
+      #17483d 100%
+    );
 
   color: var(--cream);
+
+  overflow: hidden;
 
 }
 
