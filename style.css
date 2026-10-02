@@ -3258,9 +3258,14 @@ blockquote {
   font-size:
     clamp(40px, 6vw, 78px);
 
+  font-weight: 600;
+
   line-height: .98;
 
   letter-spacing: -.055em;
+
+  text-shadow:
+    0 10px 35px rgba(0,0,0,.22);
 
 }
 
