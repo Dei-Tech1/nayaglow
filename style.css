@@ -3289,11 +3289,19 @@ blockquote {
 
   margin: auto;
 
-  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
 
   line-height: 1.9;
 
-  opacity: .7;
+  letter-spacing: .01em;
+
+  color: var(--cream);
+
+  opacity: .82;
 
 }
 
