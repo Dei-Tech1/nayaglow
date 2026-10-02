@@ -2960,8 +2960,6 @@ blockquote {
 
 }
 
-
-.section-heading h2 {
 .values .section-heading h2 {
 
   color: var(--cream);
@@ -2983,7 +2981,6 @@ blockquote {
     rgba(200,165,106,.14);
 
 }
-
 
 .values-grid {
 
