@@ -3221,6 +3221,27 @@ blockquote {
 
 }
 
+.global-panel .eyebrow {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-block;
+
+  margin: 0;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: .28em;
+
+  color: var(--gold-light);
+
+  opacity: .9;
+
+}
 
 .global-panel h2 {
 
