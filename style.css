@@ -3156,7 +3156,6 @@ blockquote {
 
 }
 
-
 .global-panel {
 
   position: relative;
@@ -3175,11 +3174,22 @@ blockquote {
     rgba(200,165,106,.3);
 
   background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.07),
+      rgba(255,255,255,.02)
+    ),
     radial-gradient(
       circle at center,
-      rgba(200,165,106,.08),
+      rgba(200,165,106,.10),
       transparent 60%
     );
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.06);
 
   overflow: hidden;
 
