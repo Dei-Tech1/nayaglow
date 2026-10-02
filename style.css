@@ -3446,22 +3446,282 @@ blockquote {
 }
 
 
+/* =================================================
+   PARLONS BEAUTÉ
+================================================= */
+
+.contact-section {
+
+  position: relative;
+
+  padding: clamp(80px, 10vw, 140px) 24px;
+
+  color: var(--cream);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 20, 16, .92),
+      rgba(12, 45, 36, .82)
+    ),
+    url("Premium_luxury_natural_skincare_website_background_photograp.png")
+    center center / cover no-repeat;
+
+  overflow: hidden;
+
+}
+
+
+/* subtle luxury glow */
+
+.contact-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(200,165,106,.16),
+      transparent 68%
+    );
+
+  top: -220px;
+  right: -160px;
+
+  pointer-events: none;
+
+}
+
+
+/* =================================================
+   CONTACT GRID
+================================================= */
+
+.contact-grid {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1180px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(320px, .9fr);
+
+  gap: clamp(50px, 8vw, 110px);
+
+  align-items: center;
+
+}
+
+
+/* =================================================
+   EYEBROW
+================================================= */
+
+.contact-section .eyebrow {
+
+  margin: 0 0 22px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: .28em;
+
+  color: var(--gold-light);
+
+}
+
+
+/* =================================================
+   CONTACT TITLE
+================================================= */
+
+.contact-section h2 {
+
+  margin: 0;
+
+  max-width: 720px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    clamp(42px, 6vw, 78px);
+
+  font-weight: 600;
+
+  line-height: .98;
+
+  letter-spacing: -.055em;
+
+  color: var(--cream);
+
+  text-shadow:
+    0 12px 35px rgba(0,0,0,.28);
+
+}
+
+
+.contact-section h2 em {
+
+  color: var(--gold-light);
+
+  font-style: normal;
+
+}
+
+
+/* =================================================
+   CONTACT CARD
+================================================= */
+
+.contact-card {
+
+  position: relative;
+
+  padding: clamp(32px, 5vw, 50px);
+
+  border:
+    1px solid
+    rgba(200,165,106,.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.035)
+    );
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+}
+
+
+/* =================================================
+   CONTACT TEXT
+================================================= */
+
+.contact-card p {
+
+  margin: 0 0 30px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  color: var(--cream);
+
+  opacity: .84;
+
+}
+
+
+/* =================================================
+   WHATSAPP BUTTON
+================================================= */
+
+.contact-card .btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 28px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid var(--gold);
+
+  background: var(--gold);
+
+  color: var(--forest-deep);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-decoration: none;
+
+  transition:
+    transform .35s ease,
+    background .35s ease,
+    color .35s ease,
+    box-shadow .35s ease;
+
+}
+
+
+.contact-card .btn:hover {
+
+  transform: translateY(-3px);
+
+  background: var(--gold-light);
+
+  color: var(--forest-deep);
+
+  box-shadow:
+    0 14px 35px rgba(200,165,106,.25);
+
+}
+
+
+/* =================================================
+   EMAIL / PHONE
+================================================= */
+
 .contact-email {
 
   display: block;
 
   margin-top: 10px;
 
-  color: var(--forest);
+  color: var(--cream);
+
+  font-family:
+    "Manrope",
+    sans-serif;
 
   font-size: 13px;
 
+  line-height: 1.6;
+
   text-decoration: none;
 
-  opacity: .7;
+  opacity: .72;
 
   transition:
-    opacity .3s ease;
+    opacity .3s ease,
+    color .3s ease,
+    transform .3s ease;
 
 }
 
@@ -3469,6 +3729,40 @@ blockquote {
 .contact-email:hover {
 
   opacity: 1;
+
+  color: var(--gold-light);
+
+  transform: translateX(4px);
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 800px) {
+
+  .contact-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+  }
+
+  .contact-section h2 {
+
+    font-size:
+      clamp(40px, 12vw, 62px);
+
+  }
+
+  .contact-card {
+
+    padding: 32px 26px;
+
+  }
 
 }
 
