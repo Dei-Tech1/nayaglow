@@ -3327,17 +3327,29 @@ blockquote {
 
 .global-points span {
 
-  padding: 12px 20px;
+  padding: 13px 22px;
 
   border:
     1px solid
     rgba(200,165,106,.35);
 
+  background:
+    rgba(255,255,255,.035);
+
   font-size: 9px;
 
-  letter-spacing: .2em;
+  font-weight: 600;
+
+  letter-spacing: .22em;
 
   color: var(--gold-light);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform .4s ease,
+    background .4s ease,
+    border-color .4s ease;
 
 }
 
